@@ -454,11 +454,7 @@ export const AppShell: React.FC = () => {
       {/* 1. Left Navigation Rail (Dark Navy Institutional #0B1220) */}
       <aside className="sidebar">
         <div className="sidebar-header">
-          <span className="logo-badge">अन्वेषा</span>
-          <div>
-            <div className="logo-title">ANVESHA</div>
-            <div className="logo-subtitle">CPSE Procurement · MoPNG</div>
-          </div>
+          <div className="logo-title">ANVESHA</div>
         </div>
 
         <nav className="sidebar-nav">
