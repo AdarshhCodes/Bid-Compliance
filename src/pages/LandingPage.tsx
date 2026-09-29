@@ -16,12 +16,12 @@ export const LandingPage: React.FC = () => {
   const navigate = useNavigate();
 
   const processSteps = [
-    { icon: FileText, title: 'Tender Clause', desc: 'Extract requirements & rules', color: 'var(--border-accent)' },
-    { icon: FileText, title: 'Bidder Documents', desc: 'Find coordinate-grounded evidence', color: '#0284C7' },
-    { icon: Building, title: 'Authority Verification', desc: 'Check external government sources', color: 'var(--status-verified-dot)' },
-    { icon: Users, title: 'Cross-Bidder Intelligence', desc: 'Detect relationship signals', color: '#8B5CF6' },
-    { icon: UserCheck, title: 'Officer Review', desc: 'You decide & record statutory rationale', color: 'var(--accent-gold)' },
-    { icon: GitCommit, title: 'Audit Trail', desc: 'Reconstruct decisions anytime (SHA-256)', color: 'var(--text-secondary)' }
+    { icon: FileText, title: 'Tender Clause', desc: 'Extract requirements & rules', color: 'var(--palette-teal)' },
+    { icon: FileText, title: 'Bidder Documents', desc: 'Find coordinate-grounded evidence', color: 'var(--palette-teal)' },
+    { icon: Building, title: 'Authority Verification', desc: 'Check external government sources', color: 'var(--palette-teal)' },
+    { icon: Users, title: 'Cross-Bidder Intelligence', desc: 'Detect relationship signals', color: 'var(--palette-cream)' },
+    { icon: UserCheck, title: 'Officer Review', desc: 'You decide & record statutory rationale', color: 'var(--palette-cream)' },
+    { icon: GitCommit, title: 'Audit Trail', desc: 'Reconstruct decisions anytime (SHA-256)', color: 'var(--palette-cream)' }
   ];
 
   return (
@@ -51,7 +51,7 @@ export const LandingPage: React.FC = () => {
           <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: '0.05em', color: '#FFFFFF' }}>
             ANVESHA
           </span>
-          <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--border-accent)' }}>
+          <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--palette-teal)' }}>
             अन्वेषा
           </span>
           <span style={{ fontSize: 10, color: 'var(--sidebar-text-muted)', marginLeft: 8, padding: '1px 6px', background: 'var(--sidebar-surface)', border: '1px solid var(--sidebar-border)', borderRadius: 3, fontFamily: 'var(--font-mono)' }}>
@@ -71,12 +71,12 @@ export const LandingPage: React.FC = () => {
               borderRadius: 12,
               fontSize: 10,
               fontWeight: 700,
-              color: 'var(--status-verified-text)'
+              color: 'var(--palette-teal)'
             }}
           >
-            <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: 'var(--status-verified-dot)', flexShrink: 0 }} />
+            <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: 'var(--palette-teal)', flexShrink: 0 }} />
             <span>Demo Mode</span>
-            <span style={{ background: 'var(--status-verified-dot)', color: '#FFF', fontSize: 8, padding: '1px 4px', borderRadius: 2 }}>
+            <span style={{ background: 'var(--palette-teal)', color: '#FFF', fontSize: 8, padding: '1px 4px', borderRadius: 2 }}>
               LIVE
             </span>
           </div>
@@ -107,7 +107,7 @@ export const LandingPage: React.FC = () => {
         <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 48, alignItems: 'center', marginBottom: 40 }}>
           {/* Left Column: Title, Tagline, CTAs */}
           <div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11, color: 'var(--accent-gold)', marginBottom: 16, fontFamily: 'var(--font-mono)' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11, color: 'var(--palette-cream)', marginBottom: 16, fontFamily: 'var(--font-mono)' }}>
               <span>CPCL / MoPNG</span>
               <span>·</span>
               <span>GeM Bid Compliance Verification</span>
@@ -130,7 +130,7 @@ export const LandingPage: React.FC = () => {
               style={{
                 fontSize: 22,
                 fontWeight: 600,
-                color: 'var(--border-accent)',
+                color: 'var(--palette-teal)',
                 marginBottom: 16
               }}
             >
@@ -195,7 +195,7 @@ export const LandingPage: React.FC = () => {
               <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--sidebar-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 Forensic Verification Pipeline
               </span>
-              <span style={{ fontSize: 10, color: 'var(--border-accent)', fontFamily: 'var(--font-mono)' }}>
+              <span style={{ fontSize: 10, color: 'var(--palette-teal)', fontFamily: 'var(--font-mono)' }}>
                 6 Stages
               </span>
             </div>
@@ -257,15 +257,15 @@ export const LandingPage: React.FC = () => {
             <div style={{ fontSize: 10, color: 'var(--sidebar-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Bidders Analysed</div>
           </div>
           <div>
-            <div style={{ fontSize: 18, fontWeight: 800, fontFamily: 'var(--font-mono)', color: 'var(--border-accent)' }}>48</div>
+            <div style={{ fontSize: 18, fontWeight: 800, fontFamily: 'var(--font-mono)', color: 'var(--palette-teal)' }}>48</div>
             <div style={{ fontSize: 10, color: 'var(--sidebar-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Requirements</div>
           </div>
           <div>
-            <div style={{ fontSize: 18, fontWeight: 800, fontFamily: 'var(--font-mono)', color: 'var(--status-verified-text)' }}>196</div>
+            <div style={{ fontSize: 18, fontWeight: 800, fontFamily: 'var(--font-mono)', color: 'var(--palette-teal)' }}>196</div>
             <div style={{ fontSize: 10, color: 'var(--sidebar-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Evidence Objects</div>
           </div>
           <div>
-            <div style={{ fontSize: 18, fontWeight: 800, fontFamily: 'var(--font-mono)', color: 'var(--status-contradicted-text)' }}>11</div>
+            <div style={{ fontSize: 18, fontWeight: 800, fontFamily: 'var(--font-mono)', color: 'var(--palette-crimson)' }}>11</div>
             <div style={{ fontSize: 10, color: 'var(--sidebar-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Anomalies Found</div>
           </div>
         </div>

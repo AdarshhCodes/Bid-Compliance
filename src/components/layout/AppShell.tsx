@@ -137,7 +137,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/bidder/BIDDER-001`,
         keywords: ['hindustan', 'valves', 'b1', 'aaach1234f', '33aaach1234f1z4', 'ramanathan', '00192834', 'chennai', 'clean'],
         badge: 'VERIFIED',
-        badgeColor: '#10B981'
+        badgeColor: '#31AAA9'
       },
       {
         id: 'B2',
@@ -147,7 +147,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/bidder/BIDDER-002?trigger=turnover`,
         keywords: ['bharat', 'fluid', 'b2', 'aabcb5678g', '27aabcb5678g1z2', 'vikram', 'shah', '01928374', 'turnover', 'contradiction', 'mumbai'],
         badge: 'CONTRADICTED',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       },
       {
         id: 'B3',
@@ -157,7 +157,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/bidder/BIDDER-003?trigger=udyam`,
         keywords: ['chennai', 'petro', 'controls', 'b3', 'aaccc9012k', 'udyam-tn-02-0055443', 'balasubramanian', '03847561', 'stale', 'cancelled'],
         badge: 'CONTRADICTED',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       },
       {
         id: 'B4',
@@ -167,7 +167,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/bidder/BIDDER-004`,
         keywords: ['apex', 'industrial', 'b4', 'aadca3344p', '50200088991122', 'hdfc0001234', 'sanjay', 'deshmukh', '05847362', 'bangalore'],
         badge: 'RELATIONSHIP',
-        badgeColor: '#7C3AED'
+        badgeColor: '#6C1A1A'
       },
       {
         id: 'B5',
@@ -177,7 +177,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/bidder/BIDDER-005`,
         keywords: ['zenith', 'flow', 'b5', 'aaefz8899l', '50200088991122', 'hdfc0001234', 'naveen', 'shetty', '07483920', 'bangalore', 'cartel'],
         badge: 'RELATIONSHIP',
-        badgeColor: '#7C3AED'
+        badgeColor: '#6C1A1A'
       },
       {
         id: 'B6',
@@ -187,7 +187,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/bidder/BIDDER-006?trigger=oem`,
         keywords: ['precision', 'piping', 'b6', 'aabcp7788m', 'harpreet', 'sethi', '04938271', 'oem', 'l&t', 'scope', 'mismatch', 'delhi'],
         badge: 'CONTRADICTED',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       },
       {
         id: 'B7',
@@ -197,7 +197,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/bidder/BIDDER-007`,
         keywords: ['deccan', 'heavy', 'b7', 'aaacd9900n', '36aaacd9900n1z1', 'venkat', 'rao', '02938475', 'hyderabad', 'unverifiable', 'timeout'],
         badge: 'UNVERIFIABLE',
-        badgeColor: '#D97706'
+        badgeColor: '#966010'
       },
 
       // 2. Shared Banking Coordinates & Cartel Clues
@@ -209,7 +209,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/network?trigger=shared_bank`,
         keywords: ['50200088991122', 'hdfc0001234', 'hdfc', 'bank', 'shared', 'cartel', 'apex', 'zenith', 'rtgs', 'account'],
         badge: 'RELATIONSHIP SIGNAL',
-        badgeColor: '#7C3AED'
+        badgeColor: '#6C1A1A'
       },
       {
         id: 'BANK-ICIC0000029',
@@ -219,7 +219,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/bidder/BIDDER-001`,
         keywords: ['002905001234', 'icic0000029', 'icici', 'hindustan'],
         badge: 'VERIFIED',
-        badgeColor: '#10B981'
+        badgeColor: '#31AAA9'
       },
 
       // 3. Clauses & Mandatory Requirements
@@ -293,7 +293,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/evidence`,
         keywords: ['evd-b2-cacert-turnover', 'udin', '24089123aaaaa', 'ca certificate', 'page 2', '9.00 cr'],
         badge: 'CONTRADICTED',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       },
       {
         id: 'EVD-002',
@@ -303,7 +303,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/evidence`,
         keywords: ['evd-b3-udyam-doc', 'udyam-tn-02-0055443', 'cancelled', 'page 1'],
         badge: 'CONTRADICTED',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       },
       {
         id: 'EVD-003',
@@ -313,7 +313,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/evidence`,
         keywords: ['evd-b6-oem-letter', 'oem', 'l&t', 'commercial', 'page 1'],
         badge: 'CONTRADICTED',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       },
 
       // 5. Anomalies & Collusion Signals
@@ -325,7 +325,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/anomalies`,
         keywords: ['ctr-001', 'turnover', 'contradiction', 'bidder 2', '₹12 cr', '₹9 cr'],
         badge: 'CRITICAL',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       },
       {
         id: 'CTR-002',
@@ -335,7 +335,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/anomalies`,
         keywords: ['ctr-002', 'udyam', 'staleness', 'bidder 3', 'revocation'],
         badge: 'CRITICAL',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       },
       {
         id: 'REL-001',
@@ -345,7 +345,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/network?trigger=shared_bank`,
         keywords: ['rel-001', 'shared bank', 'cartel', '50200088991122', 'apex', 'zenith'],
         badge: 'RELATIONSHIP',
-        badgeColor: '#7C3AED'
+        badgeColor: '#6C1A1A'
       },
       {
         id: 'ANOM-001',
@@ -379,7 +379,7 @@ export const AppShell: React.FC = () => {
         path: '/tender',
         keywords: ['command centre', 'tender', 'overview', 'dashboard', 'home', 'queue'],
         badge: 'HUB',
-        badgeColor: '#2563EB'
+        badgeColor: '#31AAA9'
       },
       {
         id: 'NAV-002',
@@ -389,7 +389,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/source-health`,
         keywords: ['source health', 'adapters', 'gateways', 'circuit breaker', 'gst 504'],
         badge: 'SYSTEM',
-        badgeColor: '#2563EB'
+        badgeColor: '#31AAA9'
       },
       {
         id: 'NAV-003',
@@ -399,7 +399,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/review-queue`,
         keywords: ['review queue', 'officer', 'override', 'triage', 'pending'],
         badge: 'GOVERNANCE',
-        badgeColor: '#D97706'
+        badgeColor: '#966010'
       },
       {
         id: 'NAV-004',
@@ -409,7 +409,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/production`,
         keywords: ['production', 'readiness', 'provenance', 'scaling', 'pipeline', 'architecture', 'integration', 'udyam', 'gstn', 'mca21'],
         badge: 'PROD',
-        badgeColor: '#059669'
+        badgeColor: '#31AAA9'
       },
       {
         id: 'NAV-005',
@@ -419,7 +419,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/audit`,
         keywords: ['audit', 'ledger', 'hash chain', 'sha256', 'cvc', 'cag', 'tamper evident', 'blockchain'],
         badge: 'DEFENSIBILITY',
-        badgeColor: '#059669'
+        badgeColor: '#31AAA9'
       },
       {
         id: 'NAV-006',
@@ -429,7 +429,7 @@ export const AppShell: React.FC = () => {
         path: `/tender/${tenderId}/security`,
         keywords: ['security', 'prompt injection', 'jailbreak', 'ignore instructions', 'adversarial', 'sandbox'],
         badge: 'ISOLATION',
-        badgeColor: '#DC2626'
+        badgeColor: '#A82020'
       }
     ],
     [tenderId]
@@ -669,8 +669,8 @@ export const AppShell: React.FC = () => {
             top: 68,
             left: '50%',
             transform: 'translateX(-50%)',
-            background: '#0C1527',
-            border: '1px solid #3B82F6',
+            background: 'var(--sidebar-surface)',
+            border: '1px solid var(--palette-teal)',
             color: '#FFFFFF',
             padding: '8px 18px',
             borderRadius: 20,
@@ -684,7 +684,7 @@ export const AppShell: React.FC = () => {
             animation: 'fadeIn 150ms ease-out'
           }}
         >
-          <CheckCircle2 size={15} color="#60A5FA" />
+          <CheckCircle2 size={15} color="var(--palette-teal)" />
           <span>{activeToast}</span>
         </div>
       )}
@@ -747,28 +747,28 @@ export const AppShell: React.FC = () => {
               background: '#FFFFFF',
               borderRadius: 8,
               boxShadow: '0 24px 60px rgba(0,0,0,0.3)',
-              border: '1px solid #CBD5E1',
+              border: '1px solid var(--border-default)',
               overflow: 'hidden'
             }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Input Bar */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 16px', borderBottom: '1px solid #E2E8F0' }}>
-              <Search size={18} color="#2563EB" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 16px', borderBottom: '1px solid var(--border-default)' }}>
+              <Search size={18} color="var(--palette-teal)" />
               <input
                 autoFocus
                 type="text"
                 placeholder="Search bidders, GSTIN, PAN, clauses, bank accounts, evidence IDs, directors..."
                 value={commandSearch}
                 onChange={(e) => setCommandSearch(e.target.value)}
-                style={{ width: '100%', border: 'none', outline: 'none', fontSize: 14, fontFamily: 'var(--font-sans)', color: '#0F172A' }}
+                style={{ width: '100%', border: 'none', outline: 'none', fontSize: 14, fontFamily: 'var(--font-sans)', color: 'var(--text-primary)' }}
               />
               {commandSearch && (
-                <button onClick={() => setCommandSearch('')} style={{ color: '#94A3B8', fontSize: 11, padding: '2px 4px' }}>
+                <button onClick={() => setCommandSearch('')} style={{ color: 'var(--text-muted)', fontSize: 11, padding: '2px 4px' }}>
                   Clear
                 </button>
               )}
-              <button onClick={() => setIsCommandPaletteOpen(false)} style={{ color: '#94A3B8' }}>
+              <button onClick={() => setIsCommandPaletteOpen(false)} style={{ color: 'var(--text-muted)' }}>
                 <X size={16} />
               </button>
             </div>
