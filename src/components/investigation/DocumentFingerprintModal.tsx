@@ -59,7 +59,7 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
         >
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#7C3AED', fontWeight: 800 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--palette-maroon)', fontWeight: 800 }}>
                 <Fingerprint size={20} />
                 <span style={{ fontSize: 16, color: '#0F172A' }}>Document Fingerprint Investigation</span>
               </div>
@@ -131,8 +131,8 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
                 padding: '10px 4px',
                 fontSize: 13,
                 fontWeight: activeTab === tab.key ? 700 : 500,
-                color: activeTab === tab.key ? '#2563EB' : '#64748B',
-                borderBottom: activeTab === tab.key ? '2px solid #2563EB' : '2px solid transparent',
+                color: activeTab === tab.key ? 'var(--palette-teal)' : '#64748B',
+                borderBottom: activeTab === tab.key ? '2px solid var(--palette-teal)' : '2px solid transparent',
                 cursor: 'pointer'
               }}
             >
@@ -152,7 +152,7 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
                     <span style={{ fontSize: 11, fontWeight: 700, color: '#1E293B' }}>BIDDER 4: Apex Industrial Tech Pvt Ltd</span>
                     <div style={{ fontSize: 10, color: '#64748B' }}>Doc: Tech_Proposal_Apex_2026.pdf (Page 14)</div>
                   </div>
-                  <span style={{ fontSize: 10, background: '#EFF6FF', color: '#1D4ED8', padding: '2px 8px', borderRadius: 4, fontWeight: 600 }}>
+                  <span style={{ fontSize: 10, background: 'rgba(49, 170, 169, 0.12)', color: 'var(--palette-teal)', padding: '2px 8px', borderRadius: 4, fontWeight: 600 }}>
                     Submission: 15-Sep 12:04
                   </span>
                 </div>
@@ -185,8 +185,8 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
                   {/* Unique Shared Typo Highlight */}
                   <div
                     style={{
-                      background: '#FEE2E2',
-                      borderLeft: '4px solid #DC2626',
+                      background: 'var(--status-contradicted-bg)',
+                      borderLeft: '4px solid var(--palette-crimson)',
                       padding: '10px 14px',
                       borderRadius: '0 4px 4px 0',
                       marginBottom: 14
@@ -214,7 +214,7 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
                     <span style={{ fontSize: 11, fontWeight: 700, color: '#1E293B' }}>BIDDER 5: Zenith Flow Equipments LLP</span>
                     <div style={{ fontSize: 10, color: '#64748B' }}>Doc: Technical_Bid_Zenith_Manali.pdf (Page 11)</div>
                   </div>
-                  <span style={{ fontSize: 10, background: '#FAF5FF', color: '#6D28D9', padding: '2px 8px', borderRadius: 4, fontWeight: 600 }}>
+                  <span style={{ fontSize: 10, background: 'var(--status-relationship-bg)', color: 'var(--status-relationship-text)', padding: '2px 8px', borderRadius: 4, fontWeight: 600 }}>
                     Submission: 15-Sep 12:08 (+4 mins)
                   </span>
                 </div>
@@ -247,8 +247,8 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
                   {/* Unique Shared Typo Highlight */}
                   <div
                     style={{
-                      background: '#FEE2E2',
-                      borderLeft: '4px solid #DC2626',
+                      background: 'var(--status-contradicted-bg)',
+                      borderLeft: '4px solid var(--palette-crimson)',
                       padding: '10px 14px',
                       borderRadius: '0 4px 4px 0',
                       marginBottom: 14
@@ -288,8 +288,8 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8, fontSize: 12, fontFamily: 'var(--font-mono)' }}>
                     <div>Producer: <strong style={{ color: '#0F172A' }}>PDFKit 0.8.2 (Windows 11)</strong></div>
-                    <div>Author Tag: <strong style={{ color: '#DC2626' }}>DESKTOP-LUB0TNN\Engineer01</strong></div>
-                    <div>Creation Timestamp: <span style={{ color: '#2563EB' }}>2026-09-15T11:42:10Z</span></div>
+                    <div>Author Tag: <strong style={{ color: 'var(--palette-crimson)' }}>DESKTOP-LUB0TNN\Engineer01</strong></div>
+                    <div>Creation Timestamp: <span style={{ color: 'var(--palette-teal)' }}>2026-09-15T11:42:10Z</span></div>
                     <div>Page Size: 595.27 x 841.89 pts (A4)</div>
                     <div>Font Subsets: ArialMT, TimesNewRomanPSMT</div>
                   </div>
@@ -298,19 +298,19 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
                 <div className="panel-card" style={{ borderColor: '#FCA5A5' }}>
                   <div className="panel-card-header">
                     <span className="panel-title">Bidder 5 PDF Metadata</span>
-                    <span className="provenance-tag" style={{ color: '#7C3AED', borderColor: '#DDD6FE', background: '#FAF5FF' }}>Zenith Flow Equipments</span>
+                    <span className="provenance-tag" style={{ color: 'var(--status-relationship-text)', borderColor: 'var(--status-relationship-border)', background: 'var(--status-relationship-bg)' }}>Zenith Flow Equipments</span>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8, fontSize: 12, fontFamily: 'var(--font-mono)' }}>
                     <div>Producer: <strong style={{ color: '#0F172A' }}>PDFKit 0.8.2 (Windows 11)</strong></div>
-                    <div>Author Tag: <strong style={{ color: '#DC2626' }}>DESKTOP-LUB0TNN\Engineer01</strong></div>
-                    <div>Creation Timestamp: <span style={{ color: '#2563EB' }}>2026-09-15T11:46:22Z (+4m 12s)</span></div>
+                    <div>Author Tag: <strong style={{ color: 'var(--palette-crimson)' }}>DESKTOP-LUB0TNN\Engineer01</strong></div>
+                    <div>Creation Timestamp: <span style={{ color: 'var(--palette-teal)' }}>2026-09-15T11:46:22Z (+4m 12s)</span></div>
                     <div>Page Size: 595.27 x 841.89 pts (A4)</div>
                     <div>Font Subsets: ArialMT, TimesNewRomanPSMT</div>
                   </div>
                 </div>
               </div>
 
-              <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', padding: '12px 16px', borderRadius: 6, marginTop: 20, fontSize: 12, color: '#991B1B' }}>
+              <div style={{ background: 'var(--status-contradicted-bg)', border: '1px solid var(--status-contradicted-border)', padding: '12px 16px', borderRadius: 6, marginTop: 20, fontSize: 12, color: 'var(--status-contradicted-text)' }}>
                 <strong>Workstation Match Finding:</strong> Both technical proposals were compiled on the exact same machine identifier (<code>DESKTOP-LUB0TNN</code>) under the same OS user account, just 4 minutes and 12 seconds apart.
               </div>
             </div>
@@ -341,7 +341,7 @@ export const DocumentFingerprintModal: React.FC<DocumentFingerprintModalProps> =
                   </div>
                   <div style={{ padding: 10, background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: 4 }}>
                     <div style={{ fontSize: 10, color: '#64748B' }}>Structural Similarity</div>
-                    <strong style={{ color: '#DC2626' }}>94.2% Structural Match</strong>
+                    <strong style={{ color: 'var(--palette-crimson)' }}>94.2% Structural Match</strong>
                   </div>
                 </div>
 
