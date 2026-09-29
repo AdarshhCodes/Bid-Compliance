@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import {
   Lock,
@@ -84,7 +84,7 @@ export const SecurityEventsPage: React.FC = () => {
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
           <div>
             <h1 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', display: 'flex', alignItems: 'center', gap: 10 }}>
-              <Lock size={22} color="#2563EB" />
+              <Lock size={22} color="var(--palette-teal)" />
               <span>Adversarial Document Sandboxing & Prompt-Injection Defense</span>
             </h1>
             <p style={{ fontSize: 13, color: '#475569', marginTop: 4 }}>
@@ -107,8 +107,8 @@ export const SecurityEventsPage: React.FC = () => {
       {/* Core Security Invariant Banner */}
       <div
         style={{
-          background: '#EFF6FF',
-          border: '1px solid #BFDBFE',
+          background: 'rgba(49, 170, 169, 0.08)',
+          border: '1px solid rgba(49, 170, 169, 0.3)',
           borderRadius: 8,
           padding: '12px 18px',
           display: 'flex',
@@ -117,8 +117,8 @@ export const SecurityEventsPage: React.FC = () => {
           marginBottom: 20
         }}
       >
-        <ShieldCheck size={22} color="#2563EB" style={{ flexShrink: 0 }} />
-        <div style={{ fontSize: 12, color: '#1E40AF', lineHeight: 1.5 }}>
+        <ShieldCheck size={22} color="var(--palette-teal)" style={{ flexShrink: 0 }} />
+        <div style={{ fontSize: 12, color: 'var(--text-primary)', lineHeight: 1.5 }}>
           <strong>ANVESHA CORE ARCHITECTURAL INVARIANT (AGENTS.md Rule 6):</strong> All document text is treated as <em>untrusted data</em> inside isolated execution contexts. The extraction pipeline coordinates tokens with bounding boxes; deterministic Python rules evaluate mathematical compliance. An adversarial prompt can never hijack verification logic.
         </div>
       </div>
@@ -131,7 +131,7 @@ export const SecurityEventsPage: React.FC = () => {
           <div className="panel-card" style={{ padding: 20 }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <FileText size={18} color="#2563EB" />
+                <FileText size={18} color="var(--palette-teal)" />
                 <h3 style={{ fontSize: 14, fontWeight: 700, color: '#0F172A', margin: 0 }}>
                   Select Document for Pre-Ingestion Scanning
                 </h3>
@@ -145,7 +145,7 @@ export const SecurityEventsPage: React.FC = () => {
                     fontSize: 11,
                     padding: '3px 8px',
                     borderRadius: 4,
-                    background: !isCustomMode ? '#2563EB' : '#F1F5F9',
+                    background: !isCustomMode ? 'var(--palette-teal)' : '#F1F5F9',
                     color: !isCustomMode ? '#FFFFFF' : '#475569',
                     fontWeight: 600,
                     cursor: 'pointer'
@@ -159,7 +159,7 @@ export const SecurityEventsPage: React.FC = () => {
                     fontSize: 11,
                     padding: '3px 8px',
                     borderRadius: 4,
-                    background: isCustomMode ? '#2563EB' : '#F1F5F9',
+                    background: isCustomMode ? 'var(--palette-teal)' : '#F1F5F9',
                     color: isCustomMode ? '#FFFFFF' : '#475569',
                     fontWeight: 600,
                     cursor: 'pointer'
@@ -185,8 +185,8 @@ export const SecurityEventsPage: React.FC = () => {
                       style={{
                         padding: '10px 12px',
                         borderRadius: 6,
-                        border: `1.5px solid ${isSelected ? '#2563EB' : '#E2E8F0'}`,
-                        background: isSelected ? '#EFF6FF' : '#FFFFFF',
+                        border: `1.5px solid ${isSelected ? 'var(--palette-teal)' : '#E2E8F0'}`,
+                        background: isSelected ? 'rgba(49, 170, 169, 0.08)' : '#FFFFFF',
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
@@ -210,7 +210,7 @@ export const SecurityEventsPage: React.FC = () => {
                           borderRadius: 3,
                           background: doc.hasAdversarialPayload ? '#FEF2F2' : '#ECFDF5',
                           border: `1px solid ${doc.hasAdversarialPayload ? '#FECACA' : '#A7F3D0'}`,
-                          color: doc.hasAdversarialPayload ? '#DC2626' : '#065F46',
+                          color: doc.hasAdversarialPayload ? 'var(--palette-crimson)' : '#065F46',
                           fontFamily: 'var(--font-mono)'
                         }}
                       >
@@ -274,14 +274,14 @@ export const SecurityEventsPage: React.FC = () => {
               className="panel-card"
               style={{
                 padding: 20,
-                borderLeft: `5px solid ${scanResult.isThreatDetected ? '#DC2626' : '#059669'}`,
+                borderLeft: `5px solid ${scanResult.isThreatDetected ? 'var(--palette-crimson)' : '#059669'}`,
                 background: scanResult.isThreatDetected ? '#FFFDFD' : '#F0FDF4'
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   {scanResult.isThreatDetected ? (
-                    <ShieldAlert size={20} color="#DC2626" />
+                    <ShieldAlert size={20} color="var(--palette-crimson)" />
                   ) : (
                     <CheckCircle2 size={20} color="#059669" />
                   )}
@@ -298,7 +298,7 @@ export const SecurityEventsPage: React.FC = () => {
                     borderRadius: 4,
                     background: scanResult.isThreatDetected ? '#FEF2F2' : '#ECFDF5',
                     border: `1px solid ${scanResult.isThreatDetected ? '#FECACA' : '#A7F3D0'}`,
-                    color: scanResult.isThreatDetected ? '#DC2626' : '#065F46',
+                    color: scanResult.isThreatDetected ? 'var(--palette-crimson)' : '#065F46',
                     fontFamily: 'var(--font-mono)'
                   }}
                 >
@@ -309,7 +309,7 @@ export const SecurityEventsPage: React.FC = () => {
               {scanResult.isThreatDetected ? (
                 <div>
                   <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 6, padding: '10px 12px', marginBottom: 12 }}>
-                    <div style={{ fontSize: 11, fontWeight: 700, color: '#DC2626', marginBottom: 2 }}>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--palette-crimson)', marginBottom: 2 }}>
                       ACTION TAKEN:
                     </div>
                     <div style={{ fontSize: 12, color: '#991B1B', fontWeight: 600 }}>
@@ -318,7 +318,7 @@ export const SecurityEventsPage: React.FC = () => {
                   </div>
 
                   <div style={{ fontSize: 11, color: '#64748B', marginBottom: 4 }}>
-                    <strong>Detected Adversarial Pattern:</strong> <code style={{ color: '#DC2626' }}>"{scanResult.detectedPattern}"</code>
+                    <strong>Detected Adversarial Pattern:</strong> <code style={{ color: 'var(--palette-crimson)' }}>"{scanResult.detectedPattern}"</code>
                   </div>
 
                   <div style={{ fontSize: 11, color: '#64748B', marginBottom: 8 }}>
@@ -342,7 +342,7 @@ export const SecurityEventsPage: React.FC = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <div className="panel-card" style={{ padding: 20 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-              <Terminal size={18} color="#2563EB" />
+              <Terminal size={18} color="var(--palette-teal)" />
               <h3 style={{ fontSize: 14, fontWeight: 700, color: '#0F172A', margin: 0 }}>
                 Why ANVESHA Cannot Be Manipulated
               </h3>
@@ -354,7 +354,7 @@ export const SecurityEventsPage: React.FC = () => {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 6, padding: '10px 12px' }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#2563EB', fontFamily: 'var(--font-mono)' }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--palette-teal)', fontFamily: 'var(--font-mono)' }}>
                   1. PARSING ISOLATION BOUNDARY
                 </div>
                 <div style={{ fontSize: 12, color: '#334155', marginTop: 2 }}>

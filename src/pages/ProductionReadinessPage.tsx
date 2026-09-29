@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Cpu,
@@ -30,7 +30,7 @@ export const ProductionReadinessPage: React.FC = () => {
       agency: 'Ministry of MSME',
       dataExchanged: 'Udyam Registration Number, Enterprise Category (Micro/Small/Medium), Revocation Status',
       tag: 'DEMO ADAPTER',
-      tagColor: '#2563EB',
+      tagColor: 'var(--palette-teal)',
       productionStatus: 'REST API via NIC National MSME Gateway with mTLS certification'
     },
     {
@@ -38,7 +38,7 @@ export const ProductionReadinessPage: React.FC = () => {
       agency: 'GSTN / CBIC',
       dataExchanged: 'GSTIN Status, Legal Name, Return Filing Frequency (GSTR-1, GSTR-3B compliance)',
       tag: 'DEMO ADAPTER',
-      tagColor: '#2563EB',
+      tagColor: 'var(--palette-teal)',
       productionStatus: 'GSP (GST Suvidha Provider) authorized webhook with circuit breaker timeout'
     },
     {
@@ -46,7 +46,7 @@ export const ProductionReadinessPage: React.FC = () => {
       agency: 'Income Tax Department (ITD) / NSDL',
       dataExchanged: 'PAN-Aadhaar Linkage, Entity Legal Title, Active Tax Assessment Status',
       tag: 'DEMO ADAPTER',
-      tagColor: '#2563EB',
+      tagColor: 'var(--palette-teal)',
       productionStatus: 'Direct NSDL/UTIITSL verification endpoint'
     },
     {
@@ -54,7 +54,7 @@ export const ProductionReadinessPage: React.FC = () => {
       agency: 'Ministry of Corporate Affairs',
       dataExchanged: 'CIN/LLPIN, Director DINs, Authorized Capital, Registered Charges & Mortgages',
       tag: 'DEMO ADAPTER',
-      tagColor: '#2563EB',
+      tagColor: 'var(--palette-teal)',
       productionStatus: 'MCA API gateway integration via Open Data / Corporate Data Exchange'
     },
     {
@@ -78,7 +78,7 @@ export const ProductionReadinessPage: React.FC = () => {
       agency: 'Ministry of Labour & Employment',
       dataExchanged: 'Establishment Code, Active Wage-earners count, Monthly ECR filing receipts',
       tag: 'DEMO ADAPTER',
-      tagColor: '#2563EB',
+      tagColor: 'var(--palette-teal)',
       productionStatus: 'Unified Shram Suvidha Portal API integration'
     },
     {
@@ -86,7 +86,7 @@ export const ProductionReadinessPage: React.FC = () => {
       agency: 'Ministry of Labour & Employment',
       dataExchanged: 'Employer Code, Monthly contribution remittance, Statutory clearance certificate',
       tag: 'DEMO ADAPTER',
-      tagColor: '#2563EB',
+      tagColor: 'var(--palette-teal)',
       productionStatus: 'ESIC employer verification endpoint'
     },
     {
@@ -130,7 +130,7 @@ export const ProductionReadinessPage: React.FC = () => {
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
           <div>
             <h1 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', display: 'flex', alignItems: 'center', gap: 10 }}>
-              <Cpu size={22} color="#2563EB" />
+              <Cpu size={22} color="var(--palette-teal)" />
               <span>Production Readiness, Data Provenance & Integration Roadmap</span>
             </h1>
             <p style={{ fontSize: 13, color: '#475569', marginTop: 4 }}>
@@ -139,7 +139,7 @@ export const ProductionReadinessPage: React.FC = () => {
           </div>
 
           <div className="provenance-tag">
-            <Database size={12} color="#2563EB" />
+            <Database size={12} color="var(--palette-teal)" />
             <span>DEMO DATA — Synthetic dataset for SIH demonstration</span>
           </div>
         </div>
@@ -153,8 +153,8 @@ export const ProductionReadinessPage: React.FC = () => {
             padding: '8px 16px',
             fontSize: 12,
             fontWeight: 700,
-            borderBottom: `2px solid ${activeTab === 'PROVENANCE' ? '#2563EB' : 'transparent'}`,
-            color: activeTab === 'PROVENANCE' ? '#2563EB' : '#64748B',
+            borderBottom: `2px solid ${activeTab === 'PROVENANCE' ? 'var(--palette-teal)' : 'transparent'}`,
+            color: activeTab === 'PROVENANCE' ? 'var(--palette-teal)' : '#64748B',
             cursor: 'pointer'
           }}
         >
@@ -167,8 +167,8 @@ export const ProductionReadinessPage: React.FC = () => {
             padding: '8px 16px',
             fontSize: 12,
             fontWeight: 700,
-            borderBottom: `2px solid ${activeTab === 'INTEGRATION_MAP' ? '#2563EB' : 'transparent'}`,
-            color: activeTab === 'INTEGRATION_MAP' ? '#2563EB' : '#64748B',
+            borderBottom: `2px solid ${activeTab === 'INTEGRATION_MAP' ? 'var(--palette-teal)' : 'transparent'}`,
+            color: activeTab === 'INTEGRATION_MAP' ? 'var(--palette-teal)' : '#64748B',
             cursor: 'pointer'
           }}
         >
@@ -181,8 +181,8 @@ export const ProductionReadinessPage: React.FC = () => {
             padding: '8px 16px',
             fontSize: 12,
             fontWeight: 700,
-            borderBottom: `2px solid ${activeTab === 'ARCHITECTURE' ? '#2563EB' : 'transparent'}`,
-            color: activeTab === 'ARCHITECTURE' ? '#2563EB' : '#64748B',
+            borderBottom: `2px solid ${activeTab === 'ARCHITECTURE' ? 'var(--palette-teal)' : 'transparent'}`,
+            color: activeTab === 'ARCHITECTURE' ? 'var(--palette-teal)' : '#64748B',
             cursor: 'pointer'
           }}
         >
@@ -215,7 +215,7 @@ export const ProductionReadinessPage: React.FC = () => {
             {/* Table: What is Synthetic vs What Changes in Production */}
             <div className="panel-card" style={{ padding: 20 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
-                <Database size={18} color="#2563EB" />
+                <Database size={18} color="var(--palette-teal)" />
                 <h3 style={{ fontSize: 14, fontWeight: 700, color: '#0F172A', margin: 0 }}>
                   Active Prototype vs Production Architecture Mapping
                 </h3>
@@ -232,17 +232,17 @@ export const ProductionReadinessPage: React.FC = () => {
                 <tbody>
                   <tr style={{ borderBottom: '1px solid #E2E8F0' }}>
                     <td style={{ padding: '10px', fontWeight: 700, color: '#0F172A' }}>Tenders & Bids</td>
-                    <td style={{ padding: '10px', color: '#2563EB' }}>1 Canonical CPCL Tender · 7 Synthetic Bidders</td>
+                    <td style={{ padding: '10px', color: 'var(--palette-teal)' }}>1 Canonical CPCL Tender · 7 Synthetic Bidders</td>
                     <td style={{ padding: '10px', color: '#475569' }}>GeM Public API webhook ingest on tender closing date</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #E2E8F0' }}>
                     <td style={{ padding: '10px', fontWeight: 700, color: '#0F172A' }}>Government Portals</td>
-                    <td style={{ padding: '10px', color: '#2563EB' }}>Mock Adapters with simulated 504 timeouts</td>
+                    <td style={{ padding: '10px', color: 'var(--palette-teal)' }}>Mock Adapters with simulated 504 timeouts</td>
                     <td style={{ padding: '10px', color: '#475569' }}>Swap mock class with authorized NIC REST endpoint (zero logic change)</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #E2E8F0' }}>
                     <td style={{ padding: '10px', fontWeight: 700, color: '#0F172A' }}>Document Extraction</td>
-                    <td style={{ padding: '10px', color: '#2563EB' }}>Coordinate-anchored LayoutLM token groundings</td>
+                    <td style={{ padding: '10px', color: 'var(--palette-teal)' }}>Coordinate-anchored LayoutLM token groundings</td>
                     <td style={{ padding: '10px', color: '#475569' }}>Distributed Celery/RabbitMQ workers with OCR cache</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #E2E8F0' }}>
@@ -273,8 +273,8 @@ export const ProductionReadinessPage: React.FC = () => {
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 6, padding: '10px 12px' }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: '#1E40AF', fontFamily: 'var(--font-mono)' }}>
+                <div style={{ background: 'rgba(49, 170, 169, 0.08)', border: '1px solid rgba(49, 170, 169, 0.3)', borderRadius: 6, padding: '10px 12px' }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--palette-teal)', fontFamily: 'var(--font-mono)' }}>
                     WHERE AI IS USED (PERCEPTION ONLY):
                   </div>
                   <ul style={{ fontSize: 11, color: '#334155', marginTop: 4, paddingLeft: 18, lineHeight: 1.5 }}>
@@ -324,7 +324,7 @@ export const ProductionReadinessPage: React.FC = () => {
             </div>
 
             <div style={{ display: 'flex', gap: 10, fontSize: 10, fontFamily: 'var(--font-mono)' }}>
-              <span style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', color: '#1E40AF', padding: '2px 6px', borderRadius: 3, fontWeight: 700 }}>
+              <span style={{ background: 'rgba(49, 170, 169, 0.08)', border: '1px solid rgba(49, 170, 169, 0.3)', color: 'var(--palette-teal)', padding: '2px 6px', borderRadius: 3, fontWeight: 700 }}>
                 DEMO ADAPTER (6)
               </span>
               <span style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', color: '#065F46', padding: '2px 6px', borderRadius: 3, fontWeight: 700 }}>
@@ -447,7 +447,7 @@ export const ProductionReadinessPage: React.FC = () => {
           {/* Architectural Resilience Guarantees */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
             <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 6, padding: '12px 14px' }}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: '#2563EB', marginBottom: 4 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--palette-teal)', marginBottom: 4 }}>
                 ASYNC QUEUEING & BACKPRESSURE
               </div>
               <p style={{ fontSize: 11, color: '#475569', lineHeight: 1.5, margin: 0 }}>

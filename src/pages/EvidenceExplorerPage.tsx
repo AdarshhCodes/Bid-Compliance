@@ -226,7 +226,7 @@ export const EvidenceExplorerPage: React.FC = () => {
           </div>
 
           <div className="provenance-tag">
-            <Database size={12} color="#2563EB" />
+            <Database size={12} color="var(--palette-teal)" />
             <span>DEMO DATA — 196 Evidence Objects Indexed</span>
           </div>
         </div>
@@ -303,10 +303,10 @@ export const EvidenceExplorerPage: React.FC = () => {
               justifyContent: 'space-between',
               borderLeft: `4px solid ${
                 item.verdictImpact === 'VERIFIED'
-                  ? '#10B981'
+                  ? 'var(--palette-teal)'
                   : item.verdictImpact === 'CONTRADICTED'
-                  ? '#DC2626'
-                  : '#D97706'
+                  ? 'var(--palette-crimson)'
+                  : 'var(--palette-cream)'
               }`
             }}
           >
@@ -345,10 +345,10 @@ export const EvidenceExplorerPage: React.FC = () => {
                         : '#FFFBEB',
                     color:
                       item.verdictImpact === 'VERIFIED'
-                        ? '#065F46'
+                        ? 'var(--status-verified-text)'
                         : item.verdictImpact === 'CONTRADICTED'
-                        ? '#DC2626'
-                        : '#D97706',
+                        ? 'var(--palette-crimson)'
+                        : 'var(--status-unverifiable-text)',
                     fontFamily: 'var(--font-mono)'
                   }}
                 >
@@ -360,7 +360,7 @@ export const EvidenceExplorerPage: React.FC = () => {
                 {item.extractedField}
               </div>
 
-              <div style={{ fontSize: 13, fontWeight: 700, color: '#2563EB', fontFamily: 'var(--font-mono)', margin: '4px 0 8px' }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--palette-teal)', fontFamily: 'var(--font-mono)', margin: '4px 0 8px' }}>
                 {item.extractedValue}
               </div>
 
@@ -408,11 +408,11 @@ export const EvidenceExplorerPage: React.FC = () => {
                     gap: 4,
                     padding: '4px 8px',
                     borderRadius: 4,
-                    background: '#EFF6FF',
-                    border: '1px solid #BFDBFE',
+                    background: 'rgba(49, 170, 169, 0.08)',
+                    border: '1px solid rgba(49, 170, 169, 0.3)',
                     fontSize: 11,
                     fontWeight: 600,
-                    color: '#2563EB',
+                    color: 'var(--palette-teal)',
                     cursor: 'pointer'
                   }}
                 >

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Cpu,
@@ -95,8 +95,8 @@ export const VerificationEnginePage: React.FC = () => {
               padding: '10px 18px',
               fontSize: 13,
               fontWeight: activeTab === tab.key ? 700 : 500,
-              color: activeTab === tab.key ? '#2563EB' : '#64748B',
-              borderBottom: activeTab === tab.key ? '2px solid #2563EB' : '2px solid transparent',
+              color: activeTab === tab.key ? 'var(--palette-teal)' : '#64748B',
+              borderBottom: activeTab === tab.key ? '2px solid var(--palette-teal)' : '2px solid transparent',
               transition: 'all 150ms ease',
               cursor: 'pointer'
             }}
@@ -114,7 +114,7 @@ export const VerificationEnginePage: React.FC = () => {
           {/* Controls Bar */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#FFFFFF', padding: '12px 18px', borderRadius: 6, border: '1px solid #CBD5E1' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <Calculator size={18} color="#2563EB" />
+              <Calculator size={18} color="var(--palette-teal)" />
               <strong style={{ fontSize: 13, color: '#0F172A' }}>Select Test Verification Case:</strong>
               <div style={{ display: 'flex', background: '#F1F5F9', padding: 2, borderRadius: 5 }}>
                 <button
@@ -124,7 +124,7 @@ export const VerificationEnginePage: React.FC = () => {
                     fontSize: 11,
                     fontWeight: miiCase === 'CONTRADICTED' ? 700 : 500,
                     borderRadius: 4,
-                    background: miiCase === 'CONTRADICTED' ? '#DC2626' : 'transparent',
+                    background: miiCase === 'CONTRADICTED' ? 'var(--palette-crimson)' : 'transparent',
                     color: miiCase === 'CONTRADICTED' ? '#FFFFFF' : '#475569'
                   }}
                 >
@@ -174,7 +174,7 @@ export const VerificationEnginePage: React.FC = () => {
                     <div style={{ fontSize: 10, color: miiCase === 'CONTRADICTED' ? '#991B1B' : '#065F46', fontWeight: 700, textTransform: 'uppercase' }}>
                       ANVESHA Recomputed
                     </div>
-                    <div style={{ fontSize: 24, fontWeight: 800, color: miiCase === 'CONTRADICTED' ? '#DC2626' : '#16A34A', fontFamily: 'var(--font-mono)', marginTop: 4 }}>
+                    <div style={{ fontSize: 24, fontWeight: 800, color: miiCase === 'CONTRADICTED' ? 'var(--palette-crimson)' : '#16A34A', fontFamily: 'var(--font-mono)', marginTop: 4 }}>
                       {recomputedPct}%
                     </div>
                     <div style={{ fontSize: 10, color: miiCase === 'CONTRADICTED' ? '#991B1B' : '#047857', marginTop: 2 }}>
@@ -189,7 +189,7 @@ export const VerificationEnginePage: React.FC = () => {
                   <div style={{ color: '#0F172A', fontSize: 12 }}>
                     Local % = (₹{(domesticCost / 100000).toFixed(2)} Lakhs Domestic / ₹{(totalCost / 100000).toFixed(2)} Lakhs Total) × 100
                   </div>
-                  <div style={{ color: miiCase === 'CONTRADICTED' ? '#DC2626' : '#16A34A', fontWeight: 700, marginTop: 4 }}>
+                  <div style={{ color: miiCase === 'CONTRADICTED' ? 'var(--palette-crimson)' : '#16A34A', fontWeight: 700, marginTop: 4 }}>
                     Result = {recomputedPct}% {miiCase === 'CONTRADICTED' ? `≠ Declared ${declaredPct}% (Discrepancy: -${(parseFloat(declaredPct) - parseFloat(recomputedPct)).toFixed(1)}%)` : `== Declared ${declaredPct}% (Exact Match)`}
                   </div>
                 </div>
@@ -234,7 +234,7 @@ export const VerificationEnginePage: React.FC = () => {
                   <span className="panel-title">Clickable Bill of Materials (BoM) Line Items</span>
                   <div style={{ fontSize: 11, color: '#64748B' }}>Click any component to inspect cost origin and supplier certification</div>
                 </div>
-                <span style={{ fontSize: 11, color: '#2563EB', fontFamily: 'var(--font-mono)' }}>
+                <span style={{ fontSize: 11, color: 'var(--palette-teal)', fontFamily: 'var(--font-mono)' }}>
                   Total Package: ₹{(totalCost / 100000).toFixed(2)} Lakhs
                 </span>
               </div>
@@ -284,7 +284,7 @@ export const VerificationEnginePage: React.FC = () => {
                       <td style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', fontWeight: 600 }}>
                         ₹{(item.costInr / 100000).toFixed(2)} Lakh
                       </td>
-                      <td style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', fontWeight: 700, color: item.origin === 'DOMESTIC' ? '#16A34A' : '#DC2626' }}>
+                      <td style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', fontWeight: 700, color: item.origin === 'DOMESTIC' ? '#16A34A' : 'var(--palette-crimson)' }}>
                         {item.pct}%
                       </td>
                     </tr>
@@ -348,13 +348,13 @@ export const VerificationEnginePage: React.FC = () => {
             {/* Right: Authoritative Source State */}
             <div style={{ background: '#FFFDFD', border: '1.5px solid #FCA5A5', borderRadius: 8, padding: 18, boxShadow: '0 2px 8px rgba(220,38,38,0.06)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', color: '#DC2626', background: '#FEF2F2', padding: '2px 8px', borderRadius: 4 }}>
+                <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', color: 'var(--palette-crimson)', background: 'var(--status-contradicted-bg)', padding: '2px 8px', borderRadius: 4 }}>
                   2. Authoritative Source State (Live Udyam Registry)
                 </span>
                 <span style={{ fontSize: 11, color: '#991B1B', fontWeight: 600 }}>Revocation: 31-Aug-2026</span>
               </div>
 
-              <div style={{ fontSize: 16, fontWeight: 800, color: '#DC2626', marginBottom: 6 }}>
+              <div style={{ fontSize: 16, fontWeight: 800, color: 'var(--palette-crimson)', marginBottom: 6 }}>
                 STATUS: CANCELLED / DE-REGISTERED
               </div>
 
@@ -386,7 +386,7 @@ export const VerificationEnginePage: React.FC = () => {
               </div>
 
               <div style={{ background: '#FEF2F2', border: '1.5px solid #FCA5A5', padding: 14, borderRadius: 6 }}>
-                <div style={{ fontSize: 10, color: '#DC2626', fontFamily: 'var(--font-mono)', fontWeight: 700 }}>31-Aug-2026 (CRITICAL)</div>
+                <div style={{ fontSize: 10, color: 'var(--palette-crimson)', fontFamily: 'var(--font-mono)', fontWeight: 700 }}>31-Aug-2026 (CRITICAL)</div>
                 <strong style={{ fontSize: 12, color: '#991B1B', display: 'block', margin: '4px 0' }}>Cancelled on Registry</strong>
                 <div style={{ fontSize: 11, color: '#7F1D1D' }}>De-registered due to non-filing of MSME returns.</div>
               </div>
@@ -397,9 +397,9 @@ export const VerificationEnginePage: React.FC = () => {
                 <div style={{ fontSize: 11, color: '#64748B' }}>Bidder attaches old PDF claiming statutory EMD exemption.</div>
               </div>
 
-              <div style={{ background: '#EFF6FF', border: '1.5px solid #93C5FD', padding: 14, borderRadius: 6 }}>
-                <div style={{ fontSize: 10, color: '#2563EB', fontFamily: 'var(--font-mono)' }}>29-Sep-2026 (10:14)</div>
-                <strong style={{ fontSize: 12, color: '#1E40AF', display: 'block', margin: '4px 0' }}>ANVESHA Live Query</strong>
+              <div style={{ background: 'rgba(49, 170, 169, 0.08)', border: '1.5px solid var(--palette-teal)', padding: 14, borderRadius: 6 }}>
+                <div style={{ fontSize: 10, color: 'var(--palette-teal)', fontFamily: 'var(--font-mono)' }}>29-Sep-2026 (10:14)</div>
+                <strong style={{ fontSize: 12, color: 'var(--palette-teal)', display: 'block', margin: '4px 0' }}>ANVESHA Live Query</strong>
                 <div style={{ fontSize: 11, color: '#1E3A8A' }}>Adapter catches revocation date &lt; bid closing date $\to$ CONTRADICTED.</div>
               </div>
             </div>
@@ -428,7 +428,7 @@ export const VerificationEnginePage: React.FC = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 24 }}>
             {/* Step 1: OEM */}
             <div style={{ background: '#F8FAFC', border: '1px solid #CBD5E1', borderRadius: 8, padding: 18 }}>
-              <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', color: '#2563EB' }}>Tier 1: OEM Manufacturer</span>
+              <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', color: 'var(--palette-teal)' }}>Tier 1: OEM Manufacturer</span>
               <div style={{ fontSize: 15, fontWeight: 800, color: '#0F172A', margin: '6px 0 2px' }}>
                 L&T Valves Limited
               </div>
@@ -440,7 +440,7 @@ export const VerificationEnginePage: React.FC = () => {
 
             {/* Step 2: Distributor / Bidder */}
             <div style={{ background: '#F8FAFC', border: '1px solid #CBD5E1', borderRadius: 8, padding: 18 }}>
-              <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', color: '#2563EB' }}>Tier 2: Authorized Bidder</span>
+              <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', color: 'var(--palette-teal)' }}>Tier 2: Authorized Bidder</span>
               <div style={{ fontSize: 15, fontWeight: 800, color: '#0F172A', margin: '6px 0 2px' }}>
                 Precision Piping Solutions Pvt Ltd
               </div>
@@ -452,7 +452,7 @@ export const VerificationEnginePage: React.FC = () => {
 
             {/* Step 3: Tender Specification Target */}
             <div style={{ background: '#FFFDFD', border: '1.5px solid #FCA5A5', borderRadius: 8, padding: 18 }}>
-              <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', color: '#DC2626' }}>Tier 3: Tender Mandatory Spec</span>
+              <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', color: 'var(--palette-crimson)' }}>Tier 3: Tender Mandatory Spec</span>
               <div style={{ fontSize: 15, fontWeight: 800, color: '#991B1B', margin: '6px 0 2px' }}>
                 API-6D High-Pressure Pipeline Valves
               </div>
@@ -507,7 +507,7 @@ export const VerificationEnginePage: React.FC = () => {
               {/* Stage 2: Condition */}
               <div style={{ background: '#F8FAFC', border: '1px solid #CBD5E1', padding: 14, borderRadius: 6 }}>
                 <div style={{ fontSize: 10, color: '#64748B', fontWeight: 700 }}>2. CONDITION</div>
-                <strong style={{ fontSize: 13, color: '#2563EB', display: 'block', margin: '4px 0' }}>Udyam == ACTIVE</strong>
+                <strong style={{ fontSize: 13, color: 'var(--palette-teal)', display: 'block', margin: '4px 0' }}>Udyam == ACTIVE</strong>
                 <div style={{ fontSize: 10, color: '#64748B' }}>Must be active on bid submission date</div>
               </div>
               <span style={{ color: '#94A3B8', fontWeight: 700, fontSize: 16 }}>→</span>
@@ -515,7 +515,7 @@ export const VerificationEnginePage: React.FC = () => {
               {/* Stage 3: Evidence */}
               <div style={{ background: '#FEF2F2', border: '1.5px solid #FCA5A5', padding: 14, borderRadius: 6 }}>
                 <div style={{ fontSize: 10, color: '#991B1B', fontWeight: 700 }}>3. EVIDENCE</div>
-                <strong style={{ fontSize: 13, color: '#DC2626', display: 'block', margin: '4px 0' }}>CANCELLED</strong>
+                <strong style={{ fontSize: 13, color: 'var(--palette-crimson)', display: 'block', margin: '4px 0' }}>CANCELLED</strong>
                 <div style={{ fontSize: 10, color: '#991B1B' }}>Revoked on 31-Aug-2026 (MSME API)</div>
               </div>
               <span style={{ color: '#94A3B8', fontWeight: 700, fontSize: 16 }}>→</span>
@@ -531,7 +531,7 @@ export const VerificationEnginePage: React.FC = () => {
               {/* Stage 5: Result */}
               <div style={{ background: '#FEF2F2', border: '2px solid #EF4444', padding: 14, borderRadius: 6 }}>
                 <div style={{ fontSize: 10, color: '#991B1B', fontWeight: 700 }}>5. RESULT</div>
-                <strong style={{ fontSize: 12, color: '#DC2626', display: 'block', margin: '4px 0', fontFamily: 'var(--font-mono)' }}>
+                <strong style={{ fontSize: 12, color: 'var(--palette-crimson)', display: 'block', margin: '4px 0', fontFamily: 'var(--font-mono)' }}>
                   CANNOT BE ESTABLISHED
                 </strong>
                 <div style={{ fontSize: 9, color: '#991B1B' }}>Full EMD of ₹37 Lakhs Mandatory</div>

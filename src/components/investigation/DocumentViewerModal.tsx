@@ -61,10 +61,10 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
           width: 1200,
           maxWidth: '96vw',
           height: '92vh',
-          background: '#0F172A',
+          background: 'var(--sidebar-surface)',
           borderRadius: 8,
           boxShadow: '0 25px 60px rgba(0, 0, 0, 0.4)',
-          border: '1px solid #334155',
+          border: '1px solid var(--sidebar-border)',
           display: 'flex',
           flexDirection: 'column',
           overflow: 'hidden'
@@ -74,8 +74,8 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
         <div
           style={{
             height: 52,
-            background: '#1E293B',
-            borderBottom: '1px solid #334155',
+            background: 'var(--sidebar-surface-elevated)',
+            borderBottom: '1px solid var(--sidebar-border)',
             padding: '0 16px',
             display: 'flex',
             alignItems: 'center',
@@ -86,7 +86,7 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
         >
           {/* Document Switcher & Meta */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <div style={{ display: 'flex', background: '#0F172A', padding: 2, borderRadius: 5 }}>
+            <div style={{ display: 'flex', background: 'var(--sidebar-bg)', padding: 2, borderRadius: 5 }}>
               <button
                 onClick={() => {
                   setActiveDoc('CA_CERT');
@@ -97,7 +97,7 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                   borderRadius: 4,
                   fontSize: 11,
                   fontWeight: activeDoc === 'CA_CERT' ? 700 : 500,
-                  background: activeDoc === 'CA_CERT' ? '#2563EB' : 'transparent',
+                  background: activeDoc === 'CA_CERT' ? 'var(--palette-teal)' : 'transparent',
                   color: '#FFFFFF'
                 }}
               >
@@ -113,7 +113,7 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                   borderRadius: 4,
                   fontSize: 11,
                   fontWeight: activeDoc === 'BID_FORM' ? 700 : 500,
-                  background: activeDoc === 'BID_FORM' ? '#2563EB' : 'transparent',
+                  background: activeDoc === 'BID_FORM' ? 'var(--palette-teal)' : 'transparent',
                   color: '#FFFFFF'
                 }}
               >
@@ -121,7 +121,7 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
               </button>
             </div>
 
-            <span className="provenance-tag" style={{ fontSize: 10, background: '#334155', color: '#93C5FD', borderColor: '#475569' }}>
+            <span className="provenance-tag" style={{ fontSize: 10, background: 'var(--sidebar-active-bg)', color: 'var(--palette-teal)', borderColor: 'var(--sidebar-border)' }}>
               SHA-256: 4f98...e1b2
             </span>
           </div>
@@ -247,9 +247,9 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                       height: 120,
                       background: '#FFFFFF',
                       borderRadius: 3,
-                      border: isSelected ? '2px solid #3B82F6' : '1px solid #475569',
+                      border: isSelected ? '2px solid var(--palette-teal)' : '1px solid #475569',
                       padding: 6,
-                      boxShadow: isSelected ? '0 0 10px rgba(59, 130, 246, 0.4)' : 'none',
+                      boxShadow: isSelected ? '0 0 10px rgba(49, 170, 169, 0.4)' : 'none',
                       position: 'relative',
                       display: 'flex',
                       flexDirection: 'column',
@@ -380,12 +380,12 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                         <td style={{ padding: '6px 8px', textAlign: 'right', fontFamily: 'monospace' }}>9,50,00,000.00</td>
                         <td style={{ padding: '6px 8px', textAlign: 'right' }}>₹9.50 Cr</td>
                       </tr>
-                      <tr style={{ fontWeight: 700, background: '#FEF2F2' }}>
+                      <tr style={{ fontWeight: 700, background: 'var(--status-contradicted-bg)' }}>
                         <td style={{ padding: '8px 8px' }}>Three-Year Average Annual Turnover</td>
-                        <td style={{ padding: '8px 8px', textAlign: 'right', fontFamily: 'monospace', color: '#DC2626' }}>
+                        <td style={{ padding: '8px 8px', textAlign: 'right', fontFamily: 'monospace', color: 'var(--palette-crimson)' }}>
                           9,00,00,000.00
                         </td>
-                        <td style={{ padding: '8px 8px', textAlign: 'right', color: '#DC2626' }}>
+                        <td style={{ padding: '8px 8px', textAlign: 'right', color: 'var(--palette-crimson)' }}>
                           ₹9.00 Cr
                         </td>
                       </tr>
@@ -397,8 +397,8 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                     <div
                       style={{
                         position: 'relative',
-                        border: '2px solid #EF4444',
-                        background: 'rgba(239, 68, 68, 0.12)',
+                        border: '2px solid var(--palette-crimson)',
+                        background: 'rgba(168, 32, 32, 0.12)',
                         padding: '10px 14px',
                         borderRadius: 4,
                         marginBottom: 16
@@ -416,7 +416,7 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                           position: 'absolute',
                           top: -12,
                           right: 12,
-                          background: '#DC2626',
+                          background: 'var(--palette-crimson)',
                           color: '#FFFFFF',
                           padding: '2px 8px',
                           borderRadius: 3,
@@ -424,7 +424,7 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                           fontWeight: 700,
                           fontFamily: 'monospace',
                           cursor: 'pointer',
-                          boxShadow: '0 2px 6px rgba(220, 38, 38, 0.4)',
+                          boxShadow: '0 2px 6px rgba(168, 32, 32, 0.4)',
                           display: 'flex',
                           alignItems: 'center',
                           gap: 4
@@ -434,7 +434,7 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                         <span>{evidenceMarkerLabel}</span>
                       </div>
 
-                      <div style={{ fontSize: 11, fontWeight: 700, color: '#991B1B' }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--palette-crimson)' }}>
                         CERTIFIED AVERAGE ANNUAL TURNOVER: INR 9,00,00,000 (RUPEES NINE CRORES ONLY)
                       </div>
                       <div style={{ fontSize: 9, color: '#64748B', fontFamily: 'monospace', marginTop: 2 }}>
@@ -475,8 +475,8 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                       <div
                         style={{
                           position: 'relative',
-                          border: '2px solid #EF4444',
-                          background: 'rgba(239, 68, 68, 0.12)',
+                          border: '2px solid var(--palette-crimson)',
+                          background: 'rgba(168, 32, 32, 0.12)',
                           padding: '10px 14px',
                           borderRadius: 4
                         }}
@@ -491,7 +491,7 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                             position: 'absolute',
                             top: -12,
                             right: 12,
-                            background: '#2563EB',
+                            background: 'var(--palette-teal)',
                             color: '#FFFFFF',
                             padding: '2px 8px',
                             borderRadius: 3,
@@ -504,10 +504,10 @@ export const DocumentViewerModal: React.FC<DocumentViewerModalProps> = ({
                           EVIDENCE E-1021
                         </div>
                         <span style={{ color: '#64748B' }}>2. Declared Average Annual Turnover: </span>
-                        <strong style={{ color: '#DC2626', fontSize: 13, fontFamily: 'monospace' }}>
+                        <strong style={{ color: 'var(--palette-crimson)', fontSize: 13, fontFamily: 'monospace' }}>
                           INR 12,00,00,000.00 (Rupees Twelve Crores Only)
                         </strong>
-                        <div style={{ fontSize: 10, color: '#991B1B', marginTop: 3 }}>
+                        <div style={{ fontSize: 10, color: 'var(--palette-crimson)', marginTop: 3 }}>
                           Declared figure refutes attached CA Certificate figure of ₹9.00 Cr!
                         </div>
                       </div>

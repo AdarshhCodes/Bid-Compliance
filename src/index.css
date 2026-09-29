@@ -5,70 +5,84 @@
    ========================================================================== */
 
 :root {
-  /* Sidebar & App Shell Base (Near-black / Deep Navy Institutional) */
-  --sidebar-bg: #0B1220;
-  --sidebar-surface: #0F172A;
-  --sidebar-surface-elevated: #162032;
-  --sidebar-border: #1E293B;
-  --sidebar-text: #F1F5F9;
-  --sidebar-text-muted: #94A3B8;
-  --sidebar-active-bg: #1A2844;
-  --sidebar-active-border: #D97706; /* Muted Gold Accent for Active Selection */
+  /* ==========================================================================
+     Color Palette (Palette: #31AAA9 #F8E0A4 #A82020 #6C1A1A)
+     - #31AAA9: Teal / Turquoise Cyan (Primary Accent, Actions, Verified Dot)
+     - #F8E0A4: Warm Sand / Soft Cream / Pale Gold (Secondary Accent, Active Sidebar, Warning Tag)
+     - #A82020: Crimson / Brick Red (Anomalies, Contradictions, Bounding Boxes)
+     - #6C1A1A: Deep Wine / Dark Maroon (Sidebar foundation, relationships, dark institutional tone)
+     ========================================================================== */
+
+  /* Palette Direct References */
+  --palette-teal: #31AAA9;
+  --palette-cream: #F8E0A4;
+  --palette-crimson: #A82020;
+  --palette-maroon: #6C1A1A;
+
+  /* Sidebar & App Shell Base (Deep Wine / Maroon institutional tone rooted in #6C1A1A) */
+  --sidebar-bg: #18090C;
+  --sidebar-surface: #240E13;
+  --sidebar-surface-elevated: #33141B;
+  --sidebar-border: #421B23;
+  --sidebar-text: #FDFBF8;
+  --sidebar-text-muted: #B8A3A6;
+  --sidebar-active-bg: #4A1922;
+  --sidebar-active-border: #F8E0A4; /* Cream / Pale Gold Accent for Active Selection */
   --sidebar-active-text: #FFFFFF;
 
-  /* Main Workspace (Clean Off-White / Light-Gray Forensic Canvas) */
-  --bg-canvas: #F4F6FA;
+  /* Main Workspace (Clean Warm Ivory / Sand Canvas harmonizing with #F8E0A4) */
+  --bg-canvas: #FAF8F5;
   --bg-surface: #FFFFFF;
-  --bg-surface-elevated: #F8FAFC;
-  --bg-surface-hover: #F1F5F9;
+  --bg-surface-elevated: #FDFBF8;
+  --bg-surface-hover: #F5EFE6;
   --bg-input: #FFFFFF;
-  --bg-subtle: #F1F5F9;
+  --bg-subtle: #F5EFE6;
 
   /* Structural Borders */
-  --border-subtle: #EDF2F7;
-  --border-default: #E2E8F0;
-  --border-strong: #CBD5E1;
-  --border-accent: #2563EB;
-  --border-dark: #1E293B;
+  --border-subtle: #F0EAE1;
+  --border-default: #E3DAD0;
+  --border-strong: #C8BEB2;
+  --border-accent: #31AAA9; /* Vibrant Teal Accent */
+  --border-dark: #421B23;
 
   /* Text & Content Hierarchy */
-  --text-primary: #0F172A;
-  --text-secondary: #334155;
-  --text-muted: #64748B;
-  --text-dim: #94A3B8;
+  --text-primary: #1C1214; /* Deep warm espresso charcoal */
+  --text-secondary: #48393D;
+  --text-muted: #7A6C70;
+  --text-dim: #A89B9F;
   --text-inverse: #FFFFFF;
 
-  /* Accent: Single Muted Gold/Amber used sparingly */
-  --accent-gold: #D97706;
-  --accent-gold-bg: #FEF3C7;
-  --accent-gold-border: #FCD34D;
-  --accent-gold-text: #92400E;
+  /* Accent: Warm Cream / Pale Gold (#F8E0A4) & Deep Maroon (#6C1A1A) */
+  --accent-gold: #C08020;
+  --accent-gold-bg: #FEF9EE;
+  --accent-gold-border: #F8E0A4;
+  --accent-gold-text: #6C1A1A;
 
   /* Semantic Status & Verdict Tokens (Paired with Text + Icon) */
-  --status-verified-bg: #ECFDF5;
-  --status-verified-border: #A7F3D0;
-  --status-verified-text: #065F46;
-  --status-verified-dot: #10B981;
+  --status-verified-bg: #EFF9F9;
+  --status-verified-border: #A2DCDC;
+  --status-verified-text: #165E5D;
+  --status-verified-dot: #31AAA9;
 
-  --status-contradicted-bg: #FEF2F2;
-  --status-contradicted-border: #FCA5A5;
-  --status-contradicted-text: #991B1B;
-  --status-contradicted-dot: #EF4444;
+  --status-contradicted-bg: #FDF2F2;
+  --status-contradicted-border: #F5BDBD;
+  --status-contradicted-text: #A82020;
+  --status-contradicted-dot: #A82020;
 
-  --status-unverifiable-bg: #FFFBEB;
-  --status-unverifiable-border: #FDE68A;
-  --status-unverifiable-text: #92400E;
-  --status-unverifiable-dot: #F59E0B;
+  --status-unverifiable-bg: #FEFAF1;
+  --status-unverifiable-border: #F8E0A4;
+  --status-unverifiable-text: #784200;
+  --status-unverifiable-dot: #DF9B28;
 
-  --status-pending-bg: #EFF6FF;
-  --status-pending-border: #BFDBFE;
-  --status-pending-text: #1E40AF;
-  --status-pending-dot: #3B82F6;
+  --status-pending-bg: #EFF9F9;
+  --status-pending-border: #B2E5E4;
+  --status-pending-text: #1B6665;
+  --status-pending-dot: #31AAA9;
 
-  --status-relationship-bg: #FAF5FF;
-  --status-relationship-border: #DDD6FE;
-  --status-relationship-text: #5B21B6;
-  --status-relationship-dot: #8B5CF6;
+  --status-relationship-bg: #FBF0F0;
+  --status-relationship-border: #E8C1C1;
+  --status-relationship-text: #6C1A1A;
+  --status-relationship-dot: #6C1A1A;
 
   /* Legacy aliases for backwards compatibility */
   --verdict-verified-bg: var(--status-verified-bg);
@@ -186,9 +200,9 @@ button {
 }
 
 .logo-badge {
-  background: #1E293B;
-  border: 1px solid #3B82F6;
-  color: #60A5FA;
+  background: var(--sidebar-surface);
+  border: 1px solid var(--palette-teal);
+  color: var(--palette-teal);
   font-weight: 700;
   font-size: 11px;
   padding: 2px 7px;
@@ -248,7 +262,7 @@ button {
 .sidebar-footer {
   padding: 12px 14px;
   border-top: 1px solid var(--sidebar-border);
-  background-color: #080E1C;
+  background-color: #120608;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -305,9 +319,9 @@ button {
   font-size: 11px;
   font-weight: 600;
   padding: 3px 8px;
-  background-color: #FEF3C7;
-  border: 1px solid #FCD34D;
-  color: #92400E;
+  background-color: var(--accent-gold-bg);
+  border: 1px solid var(--accent-gold-border);
+  color: var(--accent-gold-text);
   border-radius: 4px;
 }
 
@@ -321,7 +335,7 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #F8FAFC;
+  background-color: var(--bg-surface-elevated);
   border: 1px solid var(--border-default);
   padding: 6px 12px;
   border-radius: 5px;
@@ -339,8 +353,9 @@ button {
 .kbd-shortcut {
   font-family: var(--font-mono);
   font-size: 10px;
-  background: #E2E8F0;
-  color: #475569;
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
   padding: 1px 5px;
   border-radius: 3px;
   font-weight: 600;
@@ -350,9 +365,9 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: #EFF6FF;
-  border: 1px dashed #93C5FD;
-  color: #1E40AF;
+  background-color: rgba(49, 170, 169, 0.08);
+  border: 1px dashed var(--palette-teal);
+  color: #165E5D;
   font-family: var(--font-mono);
   font-size: 11px;
   padding: 3px 8px;
@@ -707,8 +722,8 @@ button {
 
 /* Buttons */
 .btn-primary {
-  background-color: #2563EB;
-  border: 1px solid #1D4ED8;
+  background-color: var(--palette-teal);
+  border: 1px solid #278E8D;
   color: #FFFFFF;
   padding: 7px 14px;
   font-size: 13px;
@@ -721,7 +736,7 @@ button {
 }
 
 .btn-primary:hover {
-  background-color: #1D4ED8;
+  background-color: #278E8D;
 }
 
 .btn-secondary {
@@ -739,7 +754,7 @@ button {
 }
 
 .btn-secondary:hover {
-  background-color: #F8FAFC;
+  background-color: var(--bg-surface-hover);
   border-color: var(--border-strong);
   color: var(--text-primary);
 }
@@ -756,7 +771,7 @@ button {
   font-size: 12px;
   font-weight: 500;
   border-radius: 4px;
-  background: #F1F5F9;
+  background: var(--bg-subtle);
   color: var(--text-secondary);
   cursor: pointer;
   border: 1px solid transparent;
@@ -764,12 +779,12 @@ button {
 }
 
 .filter-tab-pill:hover {
-  background: #E2E8F0;
+  background: var(--border-default);
   color: var(--text-primary);
 }
 
 .filter-tab-pill.active {
-  background: #0F172A;
+  background: var(--palette-maroon);
   color: #FFFFFF;
   font-weight: 600;
 }
@@ -778,7 +793,7 @@ button {
 .drawer-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(15, 23, 42, 0.5);
+  background-color: rgba(24, 9, 12, 0.6);
   backdrop-filter: blur(2px);
   z-index: 50;
   display: flex;
@@ -805,7 +820,7 @@ button {
 /* Document Paper Simulation */
 .document-sheet {
   background: #FFFFFF;
-  border: 1px solid #CBD5E1;
+  border: 1px solid var(--border-strong);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   border-radius: 2px;
   position: relative;
@@ -814,8 +829,8 @@ button {
 
 .bbox-highlight {
   position: absolute;
-  border: 2px solid #EF4444;
-  background-color: rgba(239, 68, 68, 0.15);
+  border: 2px solid var(--palette-crimson);
+  background-color: rgba(168, 32, 32, 0.15);
   border-radius: 2px;
   pointer-events: none;
 }

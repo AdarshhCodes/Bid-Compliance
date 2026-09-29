@@ -130,37 +130,37 @@ export const EvidenceChain: React.FC<EvidenceChainProps> = ({
   const getNodeColors = (type: ChainNode['type'], status?: ChainNode['status']) => {
     if (status === 'FLAGGED') {
       return {
-        bg: '#FEF2F2',
-        border: '#FCA5A5',
-        text: '#991B1B',
-        iconBg: '#EF4444',
+        bg: 'var(--status-contradicted-bg)',
+        border: 'var(--status-contradicted-border)',
+        text: 'var(--status-contradicted-text)',
+        iconBg: 'var(--palette-crimson)',
         iconColor: '#FFFFFF'
       };
     }
     if (type === 'AI_EXTRACTION') {
       return {
-        bg: '#EFF6FF',
-        border: '#BFDBFE',
-        text: '#1E40AF',
-        iconBg: '#2563EB',
+        bg: 'rgba(49, 170, 169, 0.08)',
+        border: 'rgba(49, 170, 169, 0.3)',
+        text: '#165E5D',
+        iconBg: 'var(--palette-teal)',
         iconColor: '#FFFFFF'
       };
     }
     if (type === 'RULE_ENGINE') {
       return {
-        bg: '#F5F3FF',
-        border: '#DDD6FE',
-        text: '#5B21B6',
-        iconBg: '#7C3AED',
+        bg: 'var(--status-relationship-bg)',
+        border: 'var(--status-relationship-border)',
+        text: 'var(--status-relationship-text)',
+        iconBg: 'var(--palette-maroon)',
         iconColor: '#FFFFFF'
       };
     }
     return {
-      bg: '#FFFFFF',
-      border: '#E2E8F0',
-      text: '#0F172A',
-      iconBg: '#F1F5F9',
-      iconColor: '#475569'
+      bg: 'var(--bg-surface)',
+      border: 'var(--border-default)',
+      text: 'var(--text-primary)',
+      iconBg: 'var(--bg-subtle)',
+      iconColor: 'var(--text-secondary)'
     };
   };
 
@@ -176,8 +176,8 @@ export const EvidenceChain: React.FC<EvidenceChainProps> = ({
               <div
                 onClick={() => onSelectNode && onSelectNode(node)}
                 style={{
-                  background: isSelected ? '#EFF6FF' : colors.bg,
-                  border: isSelected ? '2px solid #2563EB' : `1px solid ${colors.border}`,
+                  background: isSelected ? 'rgba(49, 170, 169, 0.1)' : colors.bg,
+                  border: isSelected ? '2px solid var(--palette-teal)' : `1px solid ${colors.border}`,
                   borderRadius: 6,
                   padding: '8px 10px',
                   display: 'flex',

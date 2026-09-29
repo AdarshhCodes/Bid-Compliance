@@ -275,9 +275,9 @@ export const NetworkGraphPage: React.FC = () => {
   const getNodeFill = (type: GraphNode['type']) => {
     if (type === 'BANK') return 'var(--status-contradicted-dot)';
     if (type === 'BIDDER') return 'var(--border-accent)';
-    if (type === 'DOCUMENT') return '#D946EF';
-    if (type === 'DIRECTOR') return '#8B5CF6';
-    if (type === 'ADDRESS') return '#0284C7';
+    if (type === 'DOCUMENT') return 'var(--palette-maroon)';
+    if (type === 'DIRECTOR') return 'var(--palette-crimson)';
+    if (type === 'ADDRESS') return 'var(--palette-cream)';
     if (type === 'PHONE') return 'var(--status-verified-dot)';
     if (type === 'OEM') return '#1E293B';
     return 'var(--text-secondary)';
@@ -419,9 +419,9 @@ export const NetworkGraphPage: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 10, color: 'var(--text-secondary)' }}>
               <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--border-accent)' }}></span> Bidder</span>
               <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--status-contradicted-dot)' }}></span> Bank</span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#D946EF' }}></span> Document</span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#8B5CF6' }}></span> Director</span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: '#0284C7' }}></span> Address</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--palette-maroon)' }}></span> Document</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--palette-crimson)' }}></span> Director</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--palette-cream)' }}></span> Address</span>
               <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}><span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--status-verified-dot)' }}></span> Phone</span>
             </div>
 

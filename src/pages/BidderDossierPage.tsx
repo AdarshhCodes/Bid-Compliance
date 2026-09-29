@@ -95,7 +95,7 @@ export const BidderDossierPage: React.FC = () => {
   if (loading || !bidder) {
     return (
       <div style={{ padding: 48, textAlign: 'center', color: '#64748B', fontFamily: 'var(--font-mono)' }}>
-        <div style={{ display: 'inline-flex', padding: 12, background: '#EFF6FF', borderRadius: '50%', color: '#2563EB', marginBottom: 12 }}>
+        <div style={{ display: 'inline-flex', padding: 12, background: 'rgba(49, 170, 169, 0.12)', borderRadius: '50%', color: 'var(--palette-teal)', marginBottom: 12 }}>
           <Sparkles size={24} />
         </div>
         <div style={{ fontSize: 14, fontWeight: 700, color: '#0F172A' }}>
@@ -278,7 +278,7 @@ export const BidderDossierPage: React.FC = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#64748B' }}>
           <button
             onClick={() => navigate('/tender')}
-            style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#2563EB', fontWeight: 600, padding: 0 }}
+            style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--palette-teal)', fontWeight: 600, padding: 0 }}
           >
             <ArrowLeft size={14} />
             <span>Tender Queue</span>
@@ -351,8 +351,8 @@ export const BidderDossierPage: React.FC = () => {
               padding: '10px 18px',
               fontSize: 13,
               fontWeight: activeTab === tab.key ? 700 : 500,
-              color: activeTab === tab.key ? '#2563EB' : '#64748B',
-              borderBottom: activeTab === tab.key ? '2px solid #2563EB' : '2px solid transparent',
+              color: activeTab === tab.key ? 'var(--palette-teal)' : '#64748B',
+              borderBottom: activeTab === tab.key ? '2px solid var(--palette-teal)' : '2px solid transparent',
               transition: 'all 150ms ease'
             }}
           >

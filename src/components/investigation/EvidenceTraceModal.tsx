@@ -819,7 +819,7 @@ export const EvidenceTraceModal: React.FC<EvidenceTraceModalProps> = ({
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <UserCheck size={18} color="#2563EB" />
+                <UserCheck size={18} color="var(--palette-teal)" />
                 <h3 style={{ fontSize: 16, fontWeight: 700, color: '#0F172A', margin: 0 }}>
                   Statutory Officer Override: {requirementId}
                 </h3>
@@ -829,8 +829,8 @@ export const EvidenceTraceModal: React.FC<EvidenceTraceModalProps> = ({
               </button>
             </div>
 
-            <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 6, padding: '10px 12px', fontSize: 12, marginBottom: 14 }}>
-              <div style={{ fontWeight: 700, color: '#DC2626' }}>Automated Finding: CONTRADICTED</div>
+            <div style={{ background: 'var(--status-contradicted-bg)', border: '1px solid var(--status-contradicted-border)', borderRadius: 6, padding: '10px 12px', fontSize: 12, marginBottom: 14 }}>
+              <div style={{ fontWeight: 700, color: 'var(--palette-crimson)' }}>Automated Finding: CONTRADICTED</div>
               <div style={{ color: '#475569', marginTop: 2 }}>
                 Overriding will flip status to <strong>VERIFIED</strong>. CVC vigilance rules require mandatory recorded rationale.
               </div>
@@ -841,7 +841,7 @@ export const EvidenceTraceModal: React.FC<EvidenceTraceModalProps> = ({
                 <label style={{ fontSize: 12, fontWeight: 700, color: '#0F172A' }}>
                   Mandatory Statutory Justification:
                 </label>
-                <span style={{ fontSize: 11, color: overrideReasonInput.length >= 15 ? '#059669' : '#DC2626' }}>
+                <span style={{ fontSize: 11, color: overrideReasonInput.length >= 15 ? 'var(--palette-teal)' : 'var(--palette-crimson)' }}>
                   {overrideReasonInput.length}/15 chars min
                 </span>
               </div>

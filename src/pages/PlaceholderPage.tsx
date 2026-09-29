@@ -24,10 +24,10 @@ export const PlaceholderPage: React.FC<PlaceholderProps> = ({
           style={{
             display: 'inline-flex',
             padding: 16,
-            background: '#EFF6FF',
-            border: '1px solid #BFDBFE',
+            background: 'rgba(49, 170, 169, 0.08)',
+            border: '1px solid rgba(49, 170, 169, 0.3)',
             borderRadius: 12,
-            color: '#2563EB',
+            color: 'var(--palette-teal)',
             marginBottom: 20
           }}
         >
@@ -37,7 +37,7 @@ export const PlaceholderPage: React.FC<PlaceholderProps> = ({
         <div
           style={{
             fontSize: 11,
-            color: '#2563EB',
+            color: 'var(--palette-teal)',
             fontFamily: 'var(--font-mono)',
             fontWeight: 700,
             textTransform: 'uppercase',
