@@ -67,10 +67,10 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
             alignItems: 'center',
             gap: 6,
             padding: '5px 10px',
-            background: 'rgba(12, 21, 39, 0.85)',
-            border: '1px solid #1E2D4A',
+            background: 'rgba(36, 14, 19, 0.92)',
+            border: '1px solid var(--sidebar-border)',
             borderRadius: 20,
-            color: '#94A3B8',
+            color: 'var(--sidebar-text-muted)',
             fontSize: 11,
             fontWeight: 600,
             cursor: 'pointer',
@@ -79,7 +79,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
           }}
           title="Press 'P' or click to enable Presenter Mode & Demo Controls"
         >
-          <Sliders size={12} color="#60A5FA" />
+          <Sliders size={12} color="var(--palette-teal)" />
           <span>Presenter Mode (Press 'P')</span>
         </button>
       </div>
@@ -105,8 +105,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
           display: 'flex',
           alignItems: 'center',
           gap: 8,
-          background: '#0C1527',
-          border: '1px solid #1E2D4A',
+          background: 'var(--sidebar-surface)',
+          border: '1px solid var(--sidebar-border)',
           borderRadius: 8,
           padding: '6px 12px',
           boxShadow: '0 8px 24px rgba(0,0,0,0.35)',
@@ -114,8 +114,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10B981', animation: 'pulse 2s infinite' }} />
-          <span style={{ fontSize: 11, fontWeight: 700, color: '#60A5FA', letterSpacing: '0.04em' }}>
+          <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--palette-teal)', animation: 'pulse 2s infinite' }} />
+          <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--palette-teal)', letterSpacing: '0.04em' }}>
             PRESENTER CONTROL
           </span>
         </div>
@@ -126,8 +126,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
               fontSize: 10,
               padding: '2px 6px',
               borderRadius: 3,
-              background: '#1E293B',
-              border: '1px solid #334155',
+              background: 'var(--sidebar-surface-elevated)',
+              border: '1px solid var(--sidebar-border)',
               color: '#F8FAFC',
               fontFamily: 'var(--font-mono)'
             }}
@@ -142,8 +142,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
             display: 'inline-flex',
             alignItems: 'center',
             gap: 4,
-            background: '#1A2849',
-            border: '1px solid #334155',
+            background: 'var(--sidebar-active-bg)',
+            border: '1px solid var(--sidebar-border)',
             padding: '3px 8px',
             borderRadius: 4,
             color: '#FFFFFF',
@@ -159,7 +159,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
           onClick={onTogglePresenterMode}
           style={{
             background: 'transparent',
-            color: '#94A3B8',
+            color: 'var(--sidebar-text-muted)',
             cursor: 'pointer',
             padding: 2
           }}
@@ -174,8 +174,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
         <div
           style={{
             width: 440,
-            background: '#0C1527',
-            border: '1px solid #1E2D4A',
+            background: 'var(--sidebar-surface)',
+            border: '1px solid var(--sidebar-border)',
             borderRadius: 10,
             boxShadow: '0 16px 40px rgba(0,0,0,0.45)',
             color: '#FFFFFF',
@@ -189,10 +189,10 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
           {/* Quick Jury Scenario Triggers */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-              <span style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--sidebar-text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                 Deterministic Scenario Triggers
               </span>
-              <span style={{ fontSize: 10, color: '#64748B', fontFamily: 'var(--font-mono)' }}>
+              <span style={{ fontSize: 10, color: 'var(--sidebar-text-muted)', fontFamily: 'var(--font-mono)' }}>
                 Direct State Jump
               </span>
             </div>
@@ -206,8 +206,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #DC2626',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--palette-crimson)',
                   borderRadius: 6,
                   color: '#FECACA',
                   fontSize: 11,
@@ -217,7 +217,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                 }}
                 title="Bidder 2: ₹12 Cr declared vs ₹9 Cr CA certified"
               >
-                <AlertTriangle size={14} color="#EF4444" style={{ flexShrink: 0 }} />
+                <AlertTriangle size={14} color="var(--palette-crimson)" style={{ flexShrink: 0 }} />
                 <span>Turnover Contradiction</span>
               </button>
 
@@ -229,10 +229,10 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #D97706',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--palette-cream)',
                   borderRadius: 6,
-                  color: '#FDE68A',
+                  color: 'var(--palette-cream)',
                   fontSize: 11,
                   fontWeight: 600,
                   cursor: 'pointer',
@@ -240,7 +240,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                 }}
                 title="Bidder 3: Udyam cancelled on registry 31/08/2026"
               >
-                <Clock size={14} color="#F59E0B" style={{ flexShrink: 0 }} />
+                <Clock size={14} color="var(--palette-cream)" style={{ flexShrink: 0 }} />
                 <span>Udyam Staleness</span>
               </button>
 
@@ -252,10 +252,10 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #7C3AED',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--sidebar-border)',
                   borderRadius: 6,
-                  color: '#DDD6FE',
+                  color: 'var(--palette-cream)',
                   fontSize: 11,
                   fontWeight: 600,
                   cursor: 'pointer',
@@ -263,7 +263,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                 }}
                 title="Bidder 4 ↔ 5: Shared HDFC Bank Account 50200088991122"
               >
-                <Network size={14} color="#A78BFA" style={{ flexShrink: 0 }} />
+                <Network size={14} color="var(--palette-cream)" style={{ flexShrink: 0 }} />
                 <span>Bidder Relationship</span>
               </button>
 
@@ -275,8 +275,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #2563EB',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--palette-teal)',
                   borderRadius: 6,
                   color: '#BFDBFE',
                   fontSize: 11,
@@ -286,7 +286,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                 }}
                 title="Simulates GST 504 Timeout and UNVERIFIABLE cascade"
               >
-                <Activity size={14} color="#60A5FA" style={{ flexShrink: 0 }} />
+                <Activity size={14} color="var(--palette-teal)" style={{ flexShrink: 0 }} />
                 <span>Simulate GST Outage</span>
               </button>
 
@@ -298,8 +298,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #475569',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--sidebar-border)',
                   borderRadius: 6,
                   color: '#E2E8F0',
                   fontSize: 11,
@@ -309,7 +309,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                 }}
                 title="Screens adversarial prompt instruction inside PDF metadata"
               >
-                <Lock size={14} color="#94A3B8" style={{ flexShrink: 0 }} />
+                <Lock size={14} color="var(--sidebar-text-muted)" style={{ flexShrink: 0 }} />
                 <span>Run Security Test</span>
               </button>
 
@@ -321,8 +321,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #10B981',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--palette-teal)',
                   borderRadius: 6,
                   color: '#A7F3D0',
                   fontSize: 11,
@@ -332,7 +332,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                 }}
                 title="Replay SHA-256 Merkle chain timeline"
               >
-                <RotateCcw size={14} color="#34D399" style={{ flexShrink: 0 }} />
+                <RotateCcw size={14} color="var(--palette-teal)" style={{ flexShrink: 0 }} />
                 <span>Decision Reconstruction</span>
               </button>
             </div>
@@ -340,7 +340,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
 
           {/* Institutional Presentation & Jury Tools */}
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--sidebar-text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8 }}>
               SIH Jury Defense Tooling
             </div>
 
@@ -352,8 +352,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#2563EB',
-                  border: '1px solid #3B82F6',
+                  background: 'var(--palette-teal)',
+                  border: '1px solid #278E8D',
                   borderRadius: 6,
                   color: '#FFFFFF',
                   fontSize: 11,
@@ -372,8 +372,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #334155',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--sidebar-border)',
                   borderRadius: 6,
                   color: '#E2E8F0',
                   fontSize: 11,
@@ -381,7 +381,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   cursor: 'pointer'
                 }}
               >
-                <Info size={14} color="#60A5FA" />
+                <Info size={14} color="var(--palette-teal)" />
                 <span>Why This Matters</span>
               </button>
 
@@ -392,8 +392,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #334155',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--sidebar-border)',
                   borderRadius: 6,
                   color: '#E2E8F0',
                   fontSize: 11,
@@ -401,7 +401,7 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   cursor: 'pointer'
                 }}
               >
-                <TrendingUp size={14} color="#10B981" />
+                <TrendingUp size={14} color="var(--palette-teal)" />
                 <span>Impact Simulation</span>
               </button>
 
@@ -412,8 +412,8 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   alignItems: 'center',
                   gap: 6,
                   padding: '8px 10px',
-                  background: '#1E293B',
-                  border: '1px solid #334155',
+                  background: 'var(--sidebar-bg)',
+                  border: '1px solid var(--sidebar-border)',
                   borderRadius: 6,
                   color: '#E2E8F0',
                   fontSize: 11,
@@ -421,25 +421,25 @@ export const DemoControlPanel: React.FC<DemoControlPanelProps> = ({
                   cursor: 'pointer'
                 }}
               >
-                <Layers size={14} color="#F59E0B" />
+                <Layers size={14} color="var(--palette-cream)" />
                 <span>SIH Scope Matrix</span>
               </button>
             </div>
           </div>
 
           {/* Keyboard Shortcuts Reference */}
-          <div style={{ background: '#101B33', borderRadius: 6, padding: '8px 10px', border: '1px solid #1E2D4A' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6, color: '#8496B3', fontSize: 10, fontWeight: 700, textTransform: 'uppercase' }}>
+          <div style={{ background: 'var(--sidebar-surface-elevated)', borderRadius: 6, padding: '8px 10px', border: '1px solid var(--sidebar-border)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6, color: 'var(--sidebar-text-muted)', fontSize: 10, fontWeight: 700, textTransform: 'uppercase' }}>
               <Keyboard size={12} />
               <span>Presenter Live Hotkeys</span>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, fontSize: 10, fontFamily: 'var(--font-mono)', color: '#CBD5E1' }}>
-              <div><kbd style={{ background: '#1E293B', padding: '1px 5px', borderRadius: 3, border: '1px solid #334155', color: '#60A5FA' }}>1</kbd> Tender Overview</div>
-              <div><kbd style={{ background: '#1E293B', padding: '1px 5px', borderRadius: 3, border: '1px solid #334155', color: '#60A5FA' }}>2</kbd> Turnover Contradiction</div>
-              <div><kbd style={{ background: '#1E293B', padding: '1px 5px', borderRadius: 3, border: '1px solid #334155', color: '#60A5FA' }}>3</kbd> Network Graph</div>
-              <div><kbd style={{ background: '#1E293B', padding: '1px 5px', borderRadius: 3, border: '1px solid #334155', color: '#60A5FA' }}>4</kbd> Udyam Freshness</div>
-              <div><kbd style={{ background: '#1E293B', padding: '1px 5px', borderRadius: 3, border: '1px solid #334155', color: '#60A5FA' }}>5</kbd> GST Outage</div>
-              <div><kbd style={{ background: '#1E293B', padding: '1px 5px', borderRadius: 3, border: '1px solid #334155', color: '#60A5FA' }}>6</kbd> Decision Recon</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--sidebar-text-muted)' }}>
+              <div><kbd style={{ background: 'var(--sidebar-bg)', padding: '1px 5px', borderRadius: 3, border: '1px solid var(--sidebar-border)', color: 'var(--palette-teal)' }}>1</kbd> Tender Overview</div>
+              <div><kbd style={{ background: 'var(--sidebar-bg)', padding: '1px 5px', borderRadius: 3, border: '1px solid var(--sidebar-border)', color: 'var(--palette-teal)' }}>2</kbd> Turnover Contradiction</div>
+              <div><kbd style={{ background: 'var(--sidebar-bg)', padding: '1px 5px', borderRadius: 3, border: '1px solid var(--sidebar-border)', color: 'var(--palette-teal)' }}>3</kbd> Network Graph</div>
+              <div><kbd style={{ background: 'var(--sidebar-bg)', padding: '1px 5px', borderRadius: 3, border: '1px solid var(--sidebar-border)', color: 'var(--palette-teal)' }}>4</kbd> Udyam Freshness</div>
+              <div><kbd style={{ background: 'var(--sidebar-bg)', padding: '1px 5px', borderRadius: 3, border: '1px solid var(--sidebar-border)', color: 'var(--palette-teal)' }}>5</kbd> GST Outage</div>
+              <div><kbd style={{ background: 'var(--sidebar-bg)', padding: '1px 5px', borderRadius: 3, border: '1px solid var(--sidebar-border)', color: 'var(--palette-teal)' }}>6</kbd> Decision Recon</div>
             </div>
           </div>
         </div>

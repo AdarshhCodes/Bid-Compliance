@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {
   X,
   TrendingUp,
@@ -35,7 +35,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Target Simulation',
       description: 'Expected time for ingestion, OCR token anchoring, automated registry cross-checks, and officer sign-off.',
       icon: Clock,
-      color: '#2563EB',
+      color: '#31AAA9',
       badge: 'EXPECTED RANGE'
     },
     {
@@ -45,7 +45,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Active Dataset',
       description: 'Full statutory coverage: CA turnover certificates, PAN, GST filings, Udyam MSME, BoM sheets, and OEM authorizations.',
       icon: FileCheck,
-      color: '#059669',
+      color: '#31AAA9',
       badge: 'SYNTHETIC TEST'
     },
     {
@@ -55,7 +55,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Deterministic Rules',
       description: 'Statutory rules evaluated deterministically via Python logic without hallucinating mathematical comparisons.',
       icon: CheckCircle,
-      color: '#10B981',
+      color: '#31AAA9',
       badge: 'DETERMINISTIC'
     },
     {
@@ -65,7 +65,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Discrepancy Catch',
       description: 'Surfaced ₹3 Cr turnover gap (Bidder 2), cancelled Udyam (Bidder 3), and residential valve OEM scope mismatch (Bidder 6).',
       icon: AlertTriangle,
-      color: '#DC2626',
+      color: '#A82020',
       badge: 'PRE-AWARD RISK'
     },
     {
@@ -75,7 +75,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Honest Uncertainty',
       description: 'NIC GST gateway 504 timeout classified as UNVERIFIABLE rather than guessed or falsely approved.',
       icon: HelpCircle,
-      color: '#D97706',
+      color: '#C08020',
       badge: 'ZERO GUESSING'
     },
     {
@@ -85,7 +85,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Projected Target',
       description: 'Officer reviews priority-ranked attention queue (Uncertainty × Materiality) instead of parsing every page from scratch.',
       icon: TrendingUp,
-      color: '#7C3AED',
+      color: '#6C1A1A',
       badge: 'TARGET RANGE'
     },
     {
@@ -95,7 +95,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Governance Model',
       description: 'Expected frequency of officer overriding system recommendations with mandatory statutory justification.',
       icon: ShieldCheck,
-      color: '#475569',
+      color: '#7A6C70',
       badge: 'GOVERNANCE'
     },
     {
@@ -105,7 +105,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Quality Metric',
       description: 'Minimizing false alarms by requiring bounding box coordinate verification before generating a contradiction alert.',
       icon: Layers,
-      color: '#0284C7',
+      color: '#31AAA9',
       badge: 'BENCHMARK TARGET'
     },
     {
@@ -115,7 +115,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Zero Black-Box',
       description: 'Every extracted claim contains document page number, normalized bounding box coordinates, and source hash.',
       icon: Database,
-      color: '#059669',
+      color: '#31AAA9',
       badge: 'AUDIT REQUIREMENT'
     },
     {
@@ -125,7 +125,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
       status: 'Circuit Breaker',
       description: 'Registry downtime (GSTN, MCA21, Udyam) automatically routes through fallback queue and offline filing audit.',
       icon: AlertCircle,
-      color: '#D97706',
+      color: '#C08020',
       badge: 'RESILIENCE'
     }
   ];
@@ -140,7 +140,7 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
           background: '#FFFFFF',
           borderRadius: 10,
           boxShadow: '0 24px 48px rgba(0,0,0,0.2)',
-          border: '1px solid #CBD5E1',
+          border: '1px solid var(--border-default)',
           display: 'flex',
           flexDirection: 'column',
           overflow: 'hidden'
@@ -151,33 +151,33 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
         <div
           style={{
             padding: '20px 24px',
-            borderBottom: '1px solid #E2E8F0',
+            borderBottom: '1px solid var(--border-default)',
             display: 'flex',
             alignItems: 'flex-start',
             justifyContent: 'space-between',
-            background: '#0C1527',
+            background: 'var(--sidebar-surface)',
             color: '#FFFFFF'
           }}
         >
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
               <span className="logo-badge">अन्वेषा</span>
-              <span style={{ fontSize: 11, color: '#60A5FA', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              <span style={{ fontSize: 11, color: 'var(--palette-teal)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                 Impact Simulation Framework
               </span>
             </div>
             <h2 style={{ fontSize: 20, fontWeight: 700, margin: 0, color: '#FFFFFF' }}>
               Procurement Velocity & Compliance Impact Modeling
             </h2>
-            <div style={{ fontSize: 12, color: '#94A3B8', marginTop: 4 }}>
+            <div style={{ fontSize: 12, color: 'var(--sidebar-text-muted)', marginTop: 4 }}>
               Estimated operational metrics for CPCL Manali Refinery Procurement Division rollout.
             </div>
           </div>
           <button
             onClick={onClose}
             style={{
-              background: '#1E2D4A',
-              border: '1px solid #334155',
+              background: 'var(--sidebar-active-bg)',
+              border: '1px solid var(--sidebar-border)',
               color: '#CBD5E1',
               padding: 6,
               borderRadius: 6,
@@ -191,16 +191,16 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
         {/* Mandatory SIH Jury Guardrail Disclaimer Banner */}
         <div
           style={{
-            background: '#FEF3C7',
-            borderBottom: '1px solid #FCD34D',
+            background: 'var(--accent-gold-bg)',
+            borderBottom: '1px solid var(--accent-gold-border)',
             padding: '10px 24px',
             display: 'flex',
             alignItems: 'center',
             gap: 12
           }}
         >
-          <AlertTriangle size={16} color="#B45309" style={{ flexShrink: 0 }} />
-          <div style={{ fontSize: 12, color: '#92400E', lineHeight: 1.4 }}>
+          <AlertTriangle size={16} color="var(--accent-gold-text)" style={{ flexShrink: 0 }} />
+          <div style={{ fontSize: 12, color: 'var(--accent-gold-text)', lineHeight: 1.4 }}>
             <strong>STATUTORY BENCHMARK NOTICE:</strong> All figures presented are <strong>illustrative target ranges / simulation models</strong> based on the 7-bidder synthetic evaluation dataset. They represent expected rollout metrics, NOT claims of proven production results in live tenders.
           </div>
         </div>
@@ -214,8 +214,8 @@ export const ImpactModal: React.FC<ImpactModalProps> = ({
                 <div
                   key={idx}
                   style={{
-                    background: '#F8FAFC',
-                    border: '1px solid #E2E8F0',
+                    background: 'var(--bg-surface-elevated)',
+                    border: '1px solid var(--border-default)',
                     borderRadius: 8,
                     padding: '16px',
                     display: 'flex',

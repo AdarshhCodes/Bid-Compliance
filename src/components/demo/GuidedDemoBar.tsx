@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   ArrowRight,
@@ -27,7 +27,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 1,
     title: 'Command Centre & Triage Queue',
     badge: 'OVERVIEW',
-    badgeColor: '#2563EB',
+    badgeColor: '#31AAA9',
     path: '/tender',
     pitch: 'ANVESHA gives the CPCL officer a unified operational cockpit: 7 bidders, 48 requirements, 196 evidence objects, and priority-ranked Attention Queue.',
     actionHint: 'Notice the 7-step evidence flow and AN-001 at the top of the attention queue.'
@@ -36,7 +36,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 2,
     title: 'Bidder 2: Turnover Contradiction',
     badge: 'CONTRADICTION',
-    badgeColor: '#DC2626',
+    badgeColor: '#A82020',
     path: '/tender/CPCL-2026-VALVES-7701/bidder/BIDDER-002?trigger=turnover',
     pitch: 'AI identified a ₹3.00 Cr discrepancy: Bidder declared ₹12 Cr in cover letter, but CA certified ₹9 Cr (failing the ₹10 Cr mandatory cutoff).',
     actionHint: 'Click "Review →" on Requirement 1 to inspect the conflicting claims.'
@@ -45,7 +45,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 3,
     title: 'Split-Screen Evidence Trace',
     badge: 'PROVENANCE',
-    badgeColor: '#059669',
+    badgeColor: '#31AAA9',
     path: '/tender/CPCL-2026-VALVES-7701/bidder/BIDDER-002?trigger=turnover',
     pitch: 'Every claim is anchored to exact document pages, bounding boxes, and CA UDIN 24089123AAAAA. No ungrounded conclusions.',
     actionHint: 'Inspect the 3-pane split screen: Clause on Left, Conflicting Claims Middle, Decision on Right.'
@@ -54,7 +54,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 4,
     title: 'Visual Provenance Pipeline',
     badge: 'PROVENANCE',
-    badgeColor: '#059669',
+    badgeColor: '#31AAA9',
     path: '/tender/CPCL-2026-VALVES-7701/bidder/BIDDER-002?trigger=turnover',
     pitch: 'Notice the 4-stage pipeline at the bottom: Raw PDF → OCR Extraction → LayoutLM Grounding → Deterministic Python Verification Rule.',
     actionHint: 'Observe the distinction: AI extracts coordinates, deterministic Python rule computes math.'
@@ -63,7 +63,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 5,
     title: 'Network Intelligence: Shared Bank',
     badge: 'NETWORK',
-    badgeColor: '#7C3AED',
+    badgeColor: '#6C1A1A',
     path: '/tender/CPCL-2026-VALVES-7701/network?trigger=shared_bank',
     pitch: 'ANVESHA investigates the tender as an interconnected network. Bidders 4 and 5 share an identical HDFC corporate account (50200088991122).',
     actionHint: 'Click the purple edge between Bidder 4 and 5 to open the Relationship Inspector.'
@@ -72,7 +72,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 6,
     title: 'Document Boilerplate & Typo Fingerprint',
     badge: 'SIMILARITY',
-    badgeColor: '#7C3AED',
+    badgeColor: '#6C1A1A',
     path: '/tender/CPCL-2026-VALVES-7701/network?trigger=fingerprint',
     pitch: 'Beyond shared banking, technical proposals share 94.2% cosine text similarity and an identical unique typo: "hydrolic pressure test".',
     actionHint: 'Click "Launch Fingerprint Comparison" to see verbatim side-by-side text diff.'
@@ -81,7 +81,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 7,
     title: 'Bidder 3: Udyam Temporal Staleness',
     badge: 'STALENESS',
-    badgeColor: '#D97706',
+    badgeColor: '#C08020',
     path: '/tender/CPCL-2026-VALVES-7701/bidder/BIDDER-003?trigger=udyam',
     pitch: 'Bidder submitted an internally valid Udyam PDF, but external registry confirms registration was cancelled on 31/08/2026 before bid closing.',
     actionHint: 'Notice how registry temporal validation catches certificates revoked after printing.'
@@ -90,7 +90,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 8,
     title: 'Bidder 7: GST Outage & Graceful Degradation',
     badge: 'RESILIENCE',
-    badgeColor: '#D97706',
+    badgeColor: '#C08020',
     path: '/tender/CPCL-2026-VALVES-7701/source-health?trigger=gst_outage',
     pitch: 'When the NIC GST portal returns 504 Gateway Timeout, ANVESHA marks the check UNVERIFIABLE rather than guessing or fabricating.',
     actionHint: 'Notice the circuit breaker tripping and the officer action [Use Existing Offline Filing].'
@@ -99,7 +99,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 9,
     title: 'Officer Review & Reasoned Override',
     badge: 'OVERRIDE',
-    badgeColor: '#2563EB',
+    badgeColor: '#31AAA9',
     path: '/tender/CPCL-2026-VALVES-7701/review-queue',
     pitch: 'The statutory officer retains final decision authority. Any override requires entering a mandatory formal justification.',
     actionHint: 'Notice the review queue ranked by Uncertainty × Materiality and the override sign-off.'
@@ -108,7 +108,7 @@ export const GUIDED_STEPS: DemoStep[] = [
     stepNumber: 10,
     title: 'Decision Reconstruction & SHA-256 Merkle Chain',
     badge: 'AUDIT',
-    badgeColor: '#0F172A',
+    badgeColor: '#6C1A1A',
     path: '/tender/CPCL-2026-VALVES-7701/audit/reconstruction',
     pitch: 'Every fact, check, and officer action is hashed into an immutable Merkle ledger for total statutory defensibility before CVC / CAG.',
     actionHint: 'Press Play on the reconstruction timeline to replay the tender decision chronologically.'
@@ -159,8 +159,8 @@ export const GuidedDemoBar: React.FC<GuidedDemoBarProps> = ({
         left: 'calc(var(--sidebar-width) + 20px)',
         right: 20,
         zIndex: 100,
-        background: '#0C1527',
-        border: '1px solid #1E2D4A',
+        background: 'var(--sidebar-surface)',
+        border: '1px solid var(--sidebar-border)',
         borderRadius: 10,
         boxShadow: '0 12px 36px rgba(0, 0, 0, 0.45)',
         color: '#FFFFFF',
@@ -182,9 +182,9 @@ export const GuidedDemoBar: React.FC<GuidedDemoBarProps> = ({
             width: 38,
             height: 38,
             borderRadius: 8,
-            background: '#1A2849',
-            border: '1px solid #3B82F6',
-            color: '#60A5FA',
+            background: 'var(--sidebar-active-bg)',
+            border: '1px solid var(--palette-teal)',
+            color: 'var(--palette-teal)',
             fontWeight: 800,
             fontSize: 14,
             flexShrink: 0
@@ -228,7 +228,7 @@ export const GuidedDemoBar: React.FC<GuidedDemoBarProps> = ({
               width: idx === currentStepIndex ? 18 : 8,
               height: 8,
               borderRadius: 4,
-              background: idx === currentStepIndex ? '#3B82F6' : idx < currentStepIndex ? '#10B981' : '#334155',
+              background: idx === currentStepIndex ? 'var(--palette-teal)' : idx < currentStepIndex ? 'var(--palette-cream)' : 'var(--sidebar-border)',
               cursor: 'pointer',
               transition: 'all 150ms'
             }}
@@ -248,9 +248,9 @@ export const GuidedDemoBar: React.FC<GuidedDemoBarProps> = ({
             gap: 4,
             padding: '6px 12px',
             borderRadius: 6,
-            background: currentStepIndex === 0 ? '#1E293B' : '#1A2849',
-            border: '1px solid #334155',
-            color: currentStepIndex === 0 ? '#64748B' : '#E2E8F0',
+            background: currentStepIndex === 0 ? 'var(--sidebar-bg)' : 'var(--sidebar-active-bg)',
+            border: '1px solid var(--sidebar-border)',
+            color: currentStepIndex === 0 ? 'var(--sidebar-text-muted)' : '#E2E8F0',
             fontSize: 12,
             fontWeight: 600,
             cursor: currentStepIndex === 0 ? 'not-allowed' : 'pointer'
@@ -269,8 +269,8 @@ export const GuidedDemoBar: React.FC<GuidedDemoBarProps> = ({
             gap: 6,
             padding: '6px 14px',
             borderRadius: 6,
-            background: '#2563EB',
-            border: '1px solid #3B82F6',
+            background: 'var(--palette-teal)',
+            border: '1px solid #278E8D',
             color: '#FFFFFF',
             fontSize: 12,
             fontWeight: 700,
@@ -281,7 +281,7 @@ export const GuidedDemoBar: React.FC<GuidedDemoBarProps> = ({
           <ArrowRight size={13} />
         </button>
 
-        <div style={{ width: 1, height: 24, background: '#334155', margin: '0 4px' }} />
+        <div style={{ width: 1, height: 24, background: 'var(--sidebar-border)', margin: '0 4px' }} />
 
         {/* Explore Freely (Opt-out, never forced) */}
         <button

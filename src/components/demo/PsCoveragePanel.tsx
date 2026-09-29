@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {
   X,
   CheckCircle2,
@@ -136,33 +136,33 @@ export const PsCoveragePanel: React.FC<PsCoveragePanelProps> = ({
         <div
           style={{
             padding: '20px 24px',
-            borderBottom: '1px solid #E2E8F0',
+            borderBottom: '1px solid var(--border-default)',
             display: 'flex',
             alignItems: 'flex-start',
             justifyContent: 'space-between',
-            background: '#0C1527',
+            background: 'var(--sidebar-surface)',
             color: '#FFFFFF'
           }}
         >
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
               <span className="logo-badge">अन्वेषा</span>
-              <span style={{ fontSize: 11, color: '#60A5FA', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              <span style={{ fontSize: 11, color: 'var(--palette-teal)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                 SIH 2026 Compliance Audit
               </span>
             </div>
             <h2 style={{ fontSize: 20, fontWeight: 700, margin: 0, color: '#FFFFFF' }}>
               Problem Statement SIH26100 Scope Coverage Matrix
             </h2>
-            <div style={{ fontSize: 12, color: '#94A3B8', marginTop: 4 }}>
+            <div style={{ fontSize: 12, color: 'var(--sidebar-text-muted)', marginTop: 4 }}>
               Direct mapping of official Ministry of Petroleum & Natural Gas / CPCL requirements to implemented ANVESHA subsystems.
             </div>
           </div>
           <button
             onClick={onClose}
             style={{
-              background: '#1E2D4A',
-              border: '1px solid #334155',
+              background: 'var(--sidebar-active-bg)',
+              border: '1px solid var(--sidebar-border)',
               color: '#CBD5E1',
               padding: 6,
               borderRadius: 6,
@@ -177,7 +177,7 @@ export const PsCoveragePanel: React.FC<PsCoveragePanelProps> = ({
         <div style={{ padding: '20px 24px', overflowY: 'auto', maxHeight: 'calc(90vh - 180px)' }}>
           <table className="data-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
-              <tr style={{ background: '#F8FAFC', borderBottom: '2px solid #E2E8F0', textAlign: 'left', fontSize: 11, color: '#64748B' }}>
+              <tr style={{ background: 'var(--bg-surface-elevated)', borderBottom: '2px solid var(--border-default)', textAlign: 'left', fontSize: 11, color: 'var(--text-muted)' }}>
                 <th style={{ padding: '10px 12px', width: '22%' }}>OFFICIAL SIH26100 SCOPE</th>
                 <th style={{ padding: '10px 12px', width: '28%' }}>ANVESHA SUBSYSTEM</th>
                 <th style={{ padding: '10px 12px', width: '38%' }}>TECHNICAL IMPLEMENTATION</th>
@@ -191,23 +191,23 @@ export const PsCoveragePanel: React.FC<PsCoveragePanelProps> = ({
                   <tr
                     key={idx}
                     style={{
-                      borderBottom: '1px solid #E2E8F0',
+                      borderBottom: '1px solid var(--border-default)',
                       fontSize: 12,
-                      background: idx % 2 === 0 ? '#FFFFFF' : '#FBFCFE'
+                      background: idx % 2 === 0 ? '#FFFFFF' : 'var(--bg-surface-elevated)'
                     }}
                   >
                     <td style={{ padding: '12px', verticalAlign: 'top' }}>
-                      <div style={{ fontWeight: 700, color: '#0F172A', display: 'flex', alignItems: 'center', gap: 6 }}>
-                        <Icon size={14} color="#2563EB" />
+                      <div style={{ fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: 6 }}>
+                        <Icon size={14} color="var(--palette-teal)" />
                         <span>{item.sihClause}</span>
                       </div>
-                      <div style={{ fontSize: 11, color: '#64748B', marginTop: 4, lineHeight: 1.4 }}>
+                      <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 4, lineHeight: 1.4 }}>
                         {item.sihRequirement}
                       </div>
                     </td>
 
                     <td style={{ padding: '12px', verticalAlign: 'top' }}>
-                      <div style={{ fontWeight: 600, color: '#0F172A' }}>
+                      <div style={{ fontWeight: 600, color: 'var(--text-primary)' }}>
                         {item.ANVESHAModule}
                       </div>
                       <div style={{ marginTop: 4 }}>
@@ -218,9 +218,9 @@ export const PsCoveragePanel: React.FC<PsCoveragePanelProps> = ({
                             gap: 4,
                             padding: '2px 6px',
                             borderRadius: 4,
-                            background: '#ECFDF5',
-                            border: '1px solid #A7F3D0',
-                            color: '#065F46',
+                            background: 'var(--status-verified-bg)',
+                            border: '1px solid var(--status-verified-border)',
+                            color: 'var(--status-verified-text)',
                             fontSize: 10,
                             fontWeight: 700,
                             fontFamily: 'var(--font-mono)'
@@ -232,7 +232,7 @@ export const PsCoveragePanel: React.FC<PsCoveragePanelProps> = ({
                       </div>
                     </td>
 
-                    <td style={{ padding: '12px', verticalAlign: 'top', color: '#475569', lineHeight: 1.5 }}>
+                    <td style={{ padding: '12px', verticalAlign: 'top', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
                       {item.details}
                     </td>
 
@@ -247,10 +247,10 @@ export const PsCoveragePanel: React.FC<PsCoveragePanelProps> = ({
                           alignItems: 'center',
                           gap: 4,
                           padding: '4px 8px',
-                          background: '#EFF6FF',
-                          border: '1px solid #BFDBFE',
+                          background: 'rgba(49, 170, 169, 0.1)',
+                          border: '1px solid var(--palette-teal)',
                           borderRadius: 4,
-                          color: '#2563EB',
+                          color: 'var(--palette-teal)',
                           fontSize: 11,
                           fontWeight: 600,
                           cursor: 'pointer'
@@ -272,14 +272,14 @@ export const PsCoveragePanel: React.FC<PsCoveragePanelProps> = ({
         <div
           style={{
             padding: '14px 24px',
-            background: '#F8FAFC',
-            borderTop: '1px solid #E2E8F0',
+            background: 'var(--bg-surface-elevated)',
+            borderTop: '1px solid var(--border-default)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center'
           }}
         >
-          <div style={{ fontSize: 11, color: '#059669', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}>
+          <div style={{ fontSize: 11, color: 'var(--status-verified-text)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}>
             <CheckCircle2 size={14} />
             <span>9 of 9 Scope Deliverables Implemented & Grounded with Synthetic Dataset</span>
           </div>
