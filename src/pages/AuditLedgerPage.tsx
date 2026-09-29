@@ -28,9 +28,15 @@ export const AuditLedgerPage: React.FC = () => {
   const [hashVerificationResult, setHashVerificationResult] = useState<string | null>(null);
 
   const loadLedger = async () => {
-    const list = await getAuditLedger(false); // Newest first
-    setEvents(list);
-    setLoading(false);
+    try {
+      setLoading(true);
+      const list = await getAuditLedger(false); // Newest first
+      setEvents(list);
+    } catch (err) {
+      console.error('Error loading audit ledger:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {

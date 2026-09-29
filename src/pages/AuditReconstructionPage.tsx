@@ -33,14 +33,20 @@ export const AuditReconstructionPage: React.FC = () => {
   const [showFullPayload, setShowFullPayload] = useState(false);
 
   const loadTimeline = async () => {
-    const data = await getDecisionReconstructionTimeline();
-    setTimelineEvents(data.events);
-    setActiveOverride(data.activeOverride);
-    if (!selectedEventId && data.events.length > 0) {
-      setSelectedEventId(data.events[data.events.length - 1].id);
-      setReplayStep(data.events.length - 1);
+    try {
+      setLoading(true);
+      const data = await getDecisionReconstructionTimeline();
+      setTimelineEvents(data.events || []);
+      setActiveOverride(data.activeOverride || null);
+      if (data.events && data.events.length > 0) {
+        setSelectedEventId((prev) => (prev ? prev : data.events[data.events.length - 1].id));
+        setReplayStep(data.events.length - 1);
+      }
+    } catch (err) {
+      console.error('Error loading decision reconstruction timeline:', err);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   useEffect(() => {

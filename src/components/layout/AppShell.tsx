@@ -458,53 +458,53 @@ export const AppShell: React.FC = () => {
         </div>
 
         <nav className="sidebar-nav">
-          <NavLink to="/tender" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to="/tender" end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <FileText size={15} />
             <span>Tender Overview</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/bidders`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/bidders`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <Users size={15} />
             <span>Bidders (7)</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/requirements`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/requirements`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <CheckSquare size={15} />
             <span>Requirements (48)</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/evidence`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/evidence`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <Shield size={15} />
             <span>Evidence (196)</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/network`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/network`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <Network size={15} />
             <span>Relationships (3)</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/anomalies`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/anomalies`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <AlertTriangle size={15} />
             <span>Anomalies (11)</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/review-queue`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/review-queue`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <Clock size={15} />
             <span>Review Queue (4)</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/audit`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/audit`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <GitCommit size={15} />
             <span>Audit Ledger</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/audit/reconstruction`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/audit/reconstruction`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <RotateCcw size={15} />
             <span>Decision Reconstruction</span>
           </NavLink>
 
           <div className="nav-section-title">SYSTEM</div>
-          <NavLink to={`/tender/${tenderId}/source-health`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/source-health`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <Activity size={15} />
             <span>Source Health</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/security`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/security`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <Lock size={15} />
             <span>Security Events</span>
           </NavLink>
-          <NavLink to={`/tender/${tenderId}/production`} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <NavLink to={`/tender/${tenderId}/production`} end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <Cpu size={15} />
             <span>Production Readiness</span>
           </NavLink>
