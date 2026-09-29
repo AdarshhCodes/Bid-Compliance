@@ -29,7 +29,7 @@ export const AnomaliesPage: React.FC = () => {
       clause: 'Clause 4.2 (Turnover Criteria)',
       details: 'Declared ₹12.00 Cr in Bid Form cover letter, but CA certified figure is ₹9.00 Cr (UDIN: 24089123AAAAA). Certified figure fails mandatory tender cutoff of ₹10.00 Cr.',
       route: '/tender/CPCL-2026-VALVES-7701/bidder/BIDDER-002',
-      badgeColor: '#DC2626'
+      badgeColor: 'var(--palette-crimson)'
     },
     {
       id: 'CTR-002',
@@ -51,7 +51,7 @@ export const AnomaliesPage: React.FC = () => {
       clause: 'Clause 6.3 (OEM Authorization)',
       details: 'OEM authorization letter from L&T Valves is authentic, but explicitly authorizes commercial plumbing butterfly & gate valves, failing the mandatory refinery API-6D ball valve scope.',
       route: '/tender/CPCL-2026-VALVES-7701/bidder/BIDDER-006',
-      badgeColor: '#DC2626'
+      badgeColor: 'var(--palette-crimson)'
     },
     {
       id: 'REL-001',
@@ -62,7 +62,7 @@ export const AnomaliesPage: React.FC = () => {
       clause: 'Integrity Pact / Cartel Scrutiny',
       details: 'Identical bank account (50200088991122) and IFSC (HDFC0001234) submitted by both bidders for EMD mandate.',
       route: '/tender/CPCL-2026-VALVES-7701/network',
-      badgeColor: '#7C3AED'
+      badgeColor: 'var(--palette-maroon)'
     },
     {
       id: 'REL-002',
@@ -73,7 +73,7 @@ export const AnomaliesPage: React.FC = () => {
       clause: 'Technical Proposal Quality Plan',
       details: 'Technical proposals share 94.2% cosine embedding similarity and an identical unique typo: "hydrolic pressure test" in Section 3.',
       route: '/tender/CPCL-2026-VALVES-7701/network',
-      badgeColor: '#7C3AED'
+      badgeColor: 'var(--palette-maroon)'
     },
     {
       id: 'REL-003',
@@ -84,7 +84,7 @@ export const AnomaliesPage: React.FC = () => {
       clause: 'GeM Submission Audit',
       details: 'Bidder 4 submitted at 12:04 PM; Bidder 5 submitted at 12:08 PM from adjacent Class-C IP subnet ranges.',
       route: '/tender/CPCL-2026-VALVES-7701/network',
-      badgeColor: '#7C3AED'
+      badgeColor: 'var(--palette-maroon)'
     },
     {
       id: 'ANOM-001',
@@ -135,7 +135,7 @@ export const AnomaliesPage: React.FC = () => {
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
           <div>
             <h1 style={{ fontSize: 22, fontWeight: 700, color: '#0F172A', display: 'flex', alignItems: 'center', gap: 10 }}>
-              <AlertTriangle size={22} color="#DC2626" />
+              <AlertTriangle size={22} color="var(--palette-crimson)" />
               <span>Collusion & Forensic Anomaly Ledger</span>
             </h1>
             <p style={{ fontSize: 13, color: '#475569', marginTop: 4 }}>
@@ -180,9 +180,9 @@ export const AnomaliesPage: React.FC = () => {
                 fontWeight: 600,
                 padding: '4px 10px',
                 borderRadius: 4,
-                border: `1px solid ${filterType === t ? '#2563EB' : '#CBD5E1'}`,
-                background: filterType === t ? '#EFF6FF' : '#FFFFFF',
-                color: filterType === t ? '#2563EB' : '#475569',
+                border: `1px solid ${filterType === t ? 'var(--palette-teal)' : '#CBD5E1'}`,
+                background: filterType === t ? 'rgba(49, 170, 169, 0.1)' : '#FFFFFF',
+                color: filterType === t ? 'var(--palette-teal)' : '#475569',
                 cursor: 'pointer'
               }}
             >
@@ -221,7 +221,7 @@ export const AnomaliesPage: React.FC = () => {
                     borderRadius: 3,
                     background: item.severity === 'CRITICAL' ? '#FEF2F2' : '#FFFBEB',
                     border: `1px solid ${item.severity === 'CRITICAL' ? '#FECACA' : '#FDE68A'}`,
-                    color: item.severity === 'CRITICAL' ? '#DC2626' : '#D97706',
+                    color: item.severity === 'CRITICAL' ? 'var(--palette-crimson)' : 'var(--status-unverifiable-text)',
                     fontFamily: 'var(--font-mono)'
                   }}
                 >
@@ -237,7 +237,7 @@ export const AnomaliesPage: React.FC = () => {
                 </span>
               </div>
 
-              <div style={{ fontSize: 12, fontWeight: 600, color: '#2563EB', marginBottom: 4 }}>
+              <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--palette-teal)', marginBottom: 4 }}>
                 {item.bidder} · <span style={{ color: '#64748B' }}>{item.clause}</span>
               </div>
 

@@ -191,7 +191,7 @@ export const AuditLedgerPage: React.FC = () => {
                     background: isOfficer ? '#FFFDF8' : '#FFFFFF'
                   }}
                 >
-                  <td style={{ padding: '10px 14px', fontFamily: 'var(--font-mono)', fontWeight: 700, color: '#2563EB' }}>
+                  <td style={{ padding: '10px 14px', fontFamily: 'var(--font-mono)', fontWeight: 700, color: 'var(--palette-teal)' }}>
                     #{evt.eventIndex}
                   </td>
 
@@ -215,13 +215,13 @@ export const AuditLedgerPage: React.FC = () => {
                           evt.actorType === 'OFFICER_USER'
                             ? '#FEF3C7'
                             : evt.actorType === 'AI_SERVICE'
-                            ? '#EFF6FF'
+                            ? 'rgba(49, 170, 169, 0.1)'
                             : '#F1F5F9',
                         color:
                           evt.actorType === 'OFFICER_USER'
                             ? '#92400E'
                             : evt.actorType === 'AI_SERVICE'
-                            ? '#1E40AF'
+                            ? 'var(--palette-teal)'
                             : '#334155',
                         fontFamily: 'var(--font-mono)'
                       }}
@@ -261,10 +261,10 @@ export const AuditLedgerPage: React.FC = () => {
                       }}
                       style={{
                         padding: '4px 8px',
-                        background: '#EFF6FF',
-                        border: '1px solid #BFDBFE',
+                        background: 'rgba(49, 170, 169, 0.08)',
+                        border: '1px solid rgba(49, 170, 169, 0.3)',
                         borderRadius: 4,
-                        color: '#2563EB',
+                        color: 'var(--palette-teal)',
                         fontSize: 11,
                         fontWeight: 600,
                         cursor: 'pointer'
